@@ -109,6 +109,7 @@ collections:
     folder: "data/authors"
     create: true
     slug: "{{slug}}"
+    identifier_field: "name"
     format: "yaml"
     fields:
       - { label: "Meno autora", name: "name", widget: "string" }
@@ -121,6 +122,7 @@ collections:
     folder: "data/categories"
     create: true
     slug: "{{slug}}"
+    identifier_field: "name"
     format: "yaml"
     fields:
       - { label: "Názov kategórie", name: "name", widget: "string" }
@@ -131,6 +133,7 @@ collections:
     folder: "data/subcategories"
     create: true
     slug: "{{slug}}"
+    identifier_field: "name"
     format: "yaml"
     fields:
       - { label: "Názov podkategórie", name: "name", widget: "string" }
