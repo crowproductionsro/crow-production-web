@@ -3,7 +3,7 @@ title: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
 slug: kali-adriat-cisty-vitaj-v-realite-videokip
 category: reklamny-spot
 description: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
-image: /img/uploads/realita00090037.jpg.webp
+image: /img/uploads/realita00094424.jpg.webp
 youtube_video: https://www.youtube.com/watch?v=AZuZD_qSs5c
 large: false
 weight: 3
