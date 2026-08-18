@@ -3,7 +3,7 @@ title: 'Kali, Čis T a Adrian: Making of Videoklip „Vitaj v realite"'
 date: 2026-06-12
 category: video
 subcategory: video-natacanie
-author: matúš-takáč
+author: matus-takac
 summary: Dobrý scenár rozhoduje o tom, či natáčanie prebehne hladko. Tu je
   postup, ktorý používame pri príprave reklamných spotov.
 cover_image: /img/uploads/realita00094424.jpg.webp

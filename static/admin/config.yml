@@ -7,6 +7,11 @@ public_folder: "/img/uploads"
 
 locale: "sk"
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   - name: "projects"
     label: "Projekty"
@@ -102,21 +107,8 @@ collections:
           - { label: "Fotografia", name: "image", widget: "image" }
           - { label: "ALT text", name: "alt", widget: "string", required: false }
 
-  - name: "authors"
-    label: "Autori"
-    label_singular: "Autor"
-    folder: "data/authors"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: "name"
-    format: "yaml"
-    fields:
-      - { label: "Meno autora", name: "name", widget: "string" }
-      - { label: "Fotografia autora", name: "photo", widget: "image", required: false }
-      - { label: "Popis autora (bio)", name: "bio", widget: "text", required: false }
-
   - name: "categories"
-    label: "Kategórie"
+    label: "Kategórie (Blog aj FAQ)"
     label_singular: "Kategória"
     folder: "data/categories"
     create: true
@@ -127,7 +119,7 @@ collections:
       - { label: "Názov kategórie", name: "name", widget: "string" }
 
   - name: "subcategories"
-    label: "Podkategórie"
+    label: "Podkategórie (Blog aj FAQ)"
     label_singular: "Podkategória"
     folder: "data/subcategories"
     create: true
@@ -143,6 +135,19 @@ collections:
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
+
+  - name: "authors"
+    label: "Autori"
+    label_singular: "Autor"
+    folder: "data/authors"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    format: "yaml"
+    fields:
+      - { label: "Meno autora", name: "name", widget: "string" }
+      - { label: "Fotografia autora", name: "photo", widget: "image", required: false }
+      - { label: "Popis autora (bio)", name: "bio", widget: "text", required: false }
 
   - name: "faq"
     label: "FAQ"
