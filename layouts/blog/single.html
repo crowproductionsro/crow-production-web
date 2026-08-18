@@ -45,6 +45,18 @@
       {{ .Content }}
     </div>
 
+    {{ with .Params.gallery }}
+    <div class="article-gallery">
+      {{ range . }}
+      {{ $img := .image }}
+      {{ $alt := .alt }}
+      {{ if $img }}
+      <img class="gallery-img" src="{{ $img }}" alt="{{ $alt }}">
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+
     {{ if $author }}
     <div class="author-box">
       {{ with $author.photo }}<img src="{{ . }}" alt="{{ $author.name }}">{{ end }}
@@ -71,10 +83,20 @@
     </div>
     <div class="blog-grid">
       {{ range $related }}
+      {{ $relCategory := "" }}
+      {{ with .Params.category }}{{ $relCategory = index hugo.Data.categories . }}{{ end }}
       <a href="{{ .RelPermalink }}" class="blog-card">
-        <span class="blog-card-date">{{ partial "format-date.html" .Date }}</span>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Params.summary }}</p>
+        {{ with .Params.cover_image }}
+        <img class="blog-card-thumb" src="{{ . }}" alt="">
+        {{ end }}
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">{{ partial "format-date.html" .Date }}</span>
+            {{ with $relCategory }}<span class="blog-card-cat">{{ .name }}</span>{{ end }}
+          </div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary }}</p>
+        </div>
       </a>
       {{ end }}
     </div>

@@ -9,12 +9,36 @@
 
 <section class="blog-section">
   <div class="container">
-    <div class="blog-grid">
-      {{ range .Pages.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}" class="blog-card">
-        <span class="blog-card-date">{{ partial "format-date.html" .Date }}</span>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Params.summary }}</p>
+    {{ $pages := .Pages.ByDate.Reverse }}
+
+    <div class="blog-filters" id="blogFilters">
+      <button type="button" class="blog-filter-btn active" data-filter="all">Všetky</button>
+      {{ range $slug, $cat := hugo.Data.categories }}
+      {{ if where $pages "Params.category" $slug }}
+      <button type="button" class="blog-filter-btn" data-filter="{{ $slug }}">{{ $cat.name }}</button>
+      {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="blog-grid" id="blogGrid">
+      {{ range $pages }}
+      {{ $category := "" }}
+      {{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
+      <a href="{{ .RelPermalink }}" class="blog-card"{{ with .Params.category }} data-category="{{ . }}"{{ end }}>
+        {{ $img := .Params.cover_image }}
+        {{ $alt := .Params.cover_image_alt }}
+        {{ $title := .Title }}
+        {{ with $img }}
+        <img class="blog-card-thumb" src="{{ . }}" alt="{{ with $alt }}{{ . }}{{ else }}{{ $title }}{{ end }}">
+        {{ end }}
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">{{ partial "format-date.html" .Date }}</span>
+            {{ with $category }}<span class="blog-card-cat">{{ .name }}</span>{{ end }}
+          </div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary }}</p>
+        </div>
       </a>
       {{ end }}
     </div>

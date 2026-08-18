@@ -77,7 +77,31 @@ collections:
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa titulok článku." }
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
       - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má článok dočasne skryť z webu." }
-      - { label: "Obsah článku", name: "body", widget: "markdown", hint: "Fotku vložíte cez ikonu obrázka v paneli nástrojov. Po vložení upravte text v hranatých zátvorkách ![...] — slúži ako ALT text fotky pre SEO a nevidiacich." }
+      - label: "Obsah článku"
+        name: "body"
+        widget: "markdown"
+        hint: "Fotku vložíte cez ikonu obrázka v paneli nástrojov. Po vložení upravte text v hranatých zátvorkách ![...] — slúži ako ALT text fotky pre SEO a nevidiacich."
+        buttons:
+          - "heading-one"
+          - "heading-two"
+          - "heading-three"
+          - "bold"
+          - "italic"
+          - "code"
+          - "link"
+          - "bulleted-list"
+          - "numbered-list"
+          - "quote"
+          - "code-block"
+        editor_components: ["image"]
+      - label: "Fotogaléria"
+        name: "gallery"
+        widget: "list"
+        required: false
+        hint: "Pridajte viacero fotiek — zobrazia sa ako galéria na konci článku, podobne ako vo WordPresse."
+        fields:
+          - { label: "Fotografia", name: "image", widget: "image" }
+          - { label: "ALT text", name: "alt", widget: "string", required: false }
 
   - name: "authors"
     label: "Autori"
