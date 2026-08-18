@@ -8,7 +8,9 @@ youtube_video: https://www.youtube.com/watch?v=IrbzOeAhDuM
 large: false
 weight: 3
 seo_title: Range Rover SV | svet vo svete
-meta_description: Produkcia promo videa je TOP Auto a Land Rover
+meta_description: Zažite čistý luxus a atmosféru pred úsvitom v našom novom
+  kinematografickom videu s Range Rover SV. Pozrite si exkupluzívne zábery z
+  natáčania tohto majstrovského diela britského dizajnu.
 draft: false
 ---
 Tento projekt je vizuálnou ódou na luxus, remeselné spracovanie a nekompromisnú silu nového Range Rover SV. Našou víziou bolo zachytiť toto výnimočné vozidlo v momente, keď sa svet ešte len prebúdza
