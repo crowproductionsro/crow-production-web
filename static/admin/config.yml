@@ -92,7 +92,6 @@ collections:
           - "bulleted-list"
           - "numbered-list"
           - "quote"
-          - "code-block"
         editor_components: ["image"]
       - label: "Fotogaléria"
         name: "gallery"
