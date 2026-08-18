@@ -1,11 +1,13 @@
 ---
-title: Sury je kokot
-category: "reklamny-spot"
-description: Kampaň pre automobilovú značku
-image: /img/uploads/ca0ad885-2ec1-4a53-a85b-a179c78335a9.png
-large: true
-weight: 1
-seo_title: Nočná jazda — reklamný spot | Crow Production
+title: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
+slug: kali-adriat-cisty-vitaj-v-realite-videokip
+category: reklamny-spot
+description: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
+image: /img/uploads/realita00090037.jpg.webp
+youtube_video: https://www.youtube.com/watch?v=AZuZD_qSs5c
+large: false
+weight: 3
+seo_title: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
 meta_description: Reklamný spot Nočná jazda — video produkcia pre automobilovú
   značku od Crow Production.
 draft: false
