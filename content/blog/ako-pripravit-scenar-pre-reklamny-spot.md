@@ -7,8 +7,8 @@ author: matus-takac
 summary: Dobrý scenár rozhoduje o tom, či natáčanie prebehne hladko. Tu je
   postup, ktorý používame pri príprave reklamných spotov.
 cover_image: /img/uploads/realita00094424.jpg.webp
-cover_image_alt: ""
-seo_title: Ako pripraviť scenár pre reklamný spot | Crow Production
+cover_image_alt: 'Kali, Čis T a Adrian: Making of Videoklip „Vitaj v realite"'
+seo_title: 'Kali, Čis T a Adrian: Making of Videoklip „Vitaj v realite"'
 meta_description: Krátky návod, ako pripraviť scenár pre reklamné video tak, aby
   natáčanie prebehlo bez zbytočných komplikácií.
 draft: false
