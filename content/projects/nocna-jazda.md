@@ -2,7 +2,7 @@
 title: Sury je kokot
 tag: Reklamný spot
 description: Kampaň pre automobilovú značku
-image: ""
+image: /img/uploads/ca0ad885-2ec1-4a53-a85b-a179c78335a9.png
 large: true
 weight: 1
 seo_title: Nočná jazda — reklamný spot | Crow Production
