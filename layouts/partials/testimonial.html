@@ -1,6 +1,24 @@
-<section class="testimonial">
-  <div class="container testimonial-inner">
-    <p class="testimonial-quote">„{{ .Params.testimonial_quote }}“</p>
-    <span class="testimonial-author">{{ .Params.testimonial_author }}</span>
+<section class="testimonial" id="reviews">
+  <div class="container">
+    <div class="section-head reviews-head">
+      <p class="eyebrow">{{ .Params.reviews_eyebrow }}</p>
+      <h2>{{ .Params.reviews_title }}</h2>
+    </div>
+  </div>
+
+  <div class="reviews-carousel">
+    <button type="button" class="reviews-arrow reviews-prev" aria-label="Predchádzajúce recenzie">&larr;</button>
+
+    <div class="reviews-track" id="reviewsTrack">
+      {{ range hugo.Data.reviews }}
+      <div class="review-card">
+        <div class="review-stars" aria-label="{{ .stars }} z 5 hviezdičiek">{{ range seq .stars }}★{{ end }}</div>
+        <p class="review-text">{{ .text }}</p>
+        <span class="review-name">{{ .name }}</span>
+      </div>
+      {{ end }}
+    </div>
+
+    <button type="button" class="reviews-arrow reviews-next" aria-label="Ďalšie recenzie">&rarr;</button>
   </div>
 </section>

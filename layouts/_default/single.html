@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="article-section">
+  <div class="container article-wrap">
+    <a href="/" class="back-link">&larr; Späť na hlavnú stránku</a>
+
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Params.toc }}
+    <div class="page-toc-wrap">
+      <span class="page-toc-label">Rýchla navigácia</span>
+      {{ .TableOfContents }}
+    </div>
+    {{ end }}
+
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

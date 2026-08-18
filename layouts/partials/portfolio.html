@@ -9,7 +9,11 @@
     <div class="portfolio-grid">
       {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
       <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
+        {{ if $p.Params.image }}
+        <img class="portfolio-thumb" src="{{ $p.Params.image }}" alt="{{ $p.Title }}">
+        {{ else }}
         <div class="portfolio-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
+        {{ end }}
         <div class="portfolio-info">
           <span class="portfolio-tag">{{ $p.Params.tag }}</span>
           <h3>{{ $p.Title }}</h3>

@@ -1,0 +1,16 @@
+<section class="clients">
+  <div class="container">
+    <p class="clients-title">{{ .Params.clients_title }}</p>
+  </div>
+
+  <div class="clients-marquee">
+    <div class="clients-track">
+      {{ range hugo.Data.clients }}
+      <span class="clients-item">{{ . }}</span>
+      {{ end }}
+      {{ range hugo.Data.clients }}
+      <span class="clients-item" aria-hidden="true">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -1,5 +1,7 @@
 ---
 title: "Koľko stojí reklamné video?"
+category: "video"
+subcategory: "video-natacanie"
 weight: 2
 seo_title: "Koľko stojí reklamné video? | Crow Production"
 meta_description: "Cena reklamného videa závisí od rozsahu produkcie. Zistite, čo cenu ovplyvňuje."

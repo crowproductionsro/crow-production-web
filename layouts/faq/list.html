@@ -11,8 +11,13 @@
   <div class="container">
     <div class="faq-list">
       {{ range .Pages.ByWeight }}
+      {{ $category := "" }}
+      {{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
       <a href="{{ .RelPermalink }}" class="faq-item">
-        <h3>{{ .Title }}</h3>
+        <div class="faq-item-text">
+          {{ with $category }}<span class="faq-category">{{ .name }}</span>{{ end }}
+          <h3>{{ .Title }}</h3>
+        </div>
         <span class="faq-arrow">&rarr;</span>
       </a>
       {{ end }}

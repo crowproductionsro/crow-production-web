@@ -10,8 +10,10 @@
 {{ block "main" . }}{{ end }}
 
 {{ partial "footer.html" . }}
+{{ partial "cookie-consent.html" . }}
 
 <script src="{{ "js/script.js" | relURL }}"></script>
+<script src="{{ "js/cookie-consent.js" | relURL }}"></script>
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>

@@ -1,8 +1,15 @@
 {{ define "main" }}
+{{ $category := "" }}
+{{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
+{{ $subcategory := "" }}
+{{ with .Params.subcategory }}{{ $subcategory = index hugo.Data.subcategories . }}{{ end }}
 <section class="article-section">
   <div class="container faq-answer-wrap">
     <a href="/faq/" class="back-link">&larr; Späť na FAQ</a>
 
+    {{ if $category }}
+    <span class="project-tag-single">{{ $category.name }}{{ with $subcategory }} · {{ .name }}{{ end }}</span>
+    {{ end }}
     <h1>{{ .Title }}</h1>
 
     <div class="article-body">

@@ -1,10 +1,14 @@
 ---
 title: "Čo čakať od svadobného videa"
 date: 2026-05-03
+category: "video"
+subcategory: "video-natacanie"
+author: "crow-production"
 seo_title: "Čo čakať od svadobného videa | Crow Production"
 meta_description: "Ako prebieha natáčanie svadobného videa od prípravy až po odovzdanie hotového filmu."
 summary: "Od príchodu kameramana ráno až po odovzdanie hotového videa — takto vyzerá náš proces pri svadobnom natáčaní."
 cover_image: ""
+cover_image_alt: ""
 draft: false
 ---
 

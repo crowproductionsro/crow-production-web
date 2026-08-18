@@ -23,3 +23,18 @@ window.addEventListener('scroll', () => {
     siteHeader.classList.remove('scrolled');
   }
 });
+
+// Reviews carousel
+const reviewsTrack = document.getElementById('reviewsTrack');
+
+if (reviewsTrack) {
+  const scrollAmount = () => reviewsTrack.querySelector('.review-card').offsetWidth + 24;
+
+  document.querySelector('.reviews-prev').addEventListener('click', () => {
+    reviewsTrack.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+
+  document.querySelector('.reviews-next').addEventListener('click', () => {
+    reviewsTrack.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+}

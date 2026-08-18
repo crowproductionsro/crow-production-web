@@ -44,12 +44,79 @@ collections:
     fields:
       - { label: "Titulok článku", name: "title", widget: "string" }
       - { label: "Dátum publikovania", name: "date", widget: "datetime" }
+      - label: "Kategória"
+        name: "category"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        required: false
+        hint: "Kategórie spravujete v sekcii Kategórie nižšie."
+      - label: "Podkategória"
+        name: "subcategory"
+        widget: "relation"
+        collection: "subcategories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        required: false
+        hint: "Podkategórie spravujete v sekcii Podkategórie nižšie. Vyberte tú, ktorá patrí k zvolenej kategórii."
+      - label: "Autor"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        required: false
+        hint: "Autorov spravujete v sekcii Autori nižšie."
       - { label: "Krátky popis (na výpise blogu)", name: "summary", widget: "text" }
       - { label: "Titulná fotografia", name: "cover_image", widget: "image", required: false }
+      - { label: "ALT text titulnej fotografie", name: "cover_image_alt", widget: "string", required: false, hint: "Krátky popis fotky pre nevidiacich a SEO, napr. „Natáčanie reklamného spotu v štúdiu“." }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa titulok článku." }
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
       - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má článok dočasne skryť z webu." }
-      - { label: "Obsah článku", name: "body", widget: "markdown" }
+      - { label: "Obsah článku", name: "body", widget: "markdown", hint: "Fotku vložíte cez ikonu obrázka v paneli nástrojov. Po vložení upravte text v hranatých zátvorkách ![...] — slúži ako ALT text fotky pre SEO a nevidiacich." }
+
+  - name: "authors"
+    label: "Autori"
+    label_singular: "Autor"
+    folder: "data/authors"
+    create: true
+    slug: "{{slug}}"
+    format: "yaml"
+    fields:
+      - { label: "Meno autora", name: "name", widget: "string" }
+      - { label: "Fotografia autora", name: "photo", widget: "image", required: false }
+      - { label: "Popis autora (bio)", name: "bio", widget: "text", required: false }
+
+  - name: "categories"
+    label: "Kategórie"
+    label_singular: "Kategória"
+    folder: "data/categories"
+    create: true
+    slug: "{{slug}}"
+    format: "yaml"
+    fields:
+      - { label: "Názov kategórie", name: "name", widget: "string" }
+
+  - name: "subcategories"
+    label: "Podkategórie"
+    label_singular: "Podkategória"
+    folder: "data/subcategories"
+    create: true
+    slug: "{{slug}}"
+    format: "yaml"
+    fields:
+      - { label: "Názov podkategórie", name: "name", widget: "string" }
+      - label: "Nadradená kategória"
+        name: "category"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
 
   - name: "faq"
     label: "FAQ"
@@ -59,6 +126,24 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Otázka", name: "title", widget: "string" }
+      - label: "Kategória"
+        name: "category"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        required: false
+        hint: "Kategórie spravujete v sekcii Kategórie."
+      - label: "Podkategória"
+        name: "subcategory"
+        widget: "relation"
+        collection: "subcategories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        required: false
+        hint: "Podkategórie spravujete v sekcii Podkategórie. Vyberte tú, ktorá patrí k zvolenej kategórii."
       - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa otázka." }
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }

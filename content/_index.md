@@ -8,11 +8,13 @@ hero_highlight: "SLUŽBY"
 hero_subtitle: "Natáčame reklamné video, videoklipy, svadobné video a firemné video. Fotografiu robíme rovnako — od prípravy cez natáčanie až po finálny strih."
 hero_quote: "Reklamné video. Videoklip. Svadobné video. Fotografia. Jedna produkcia, jeden tím."
 
+clients_title: "Spolupracovali sme s"
+
 about_eyebrow: "O NÁS"
 about_title_1: "Video produkcia a fotografia"
 about_title_2: "pod jednou strechou."
-about_lead: "Crow Production je video produkcia zameraná na reklamné video, videoklipy, svadobné video a firemné video, spolu s fotografickými službami. Každý projekt vedieme od prípravy cez natáčanie až po finálny strih."
-about_text: "Pracujeme pre firmy, ktoré potrebujú reklamné alebo firemné video, aj pre páry, ktoré si objednávajú svadobné video. Kamera, strih, zvuk a farebná korekcia — všetko riešime v rámci jednej produkcie."
+about_lead: "Sme nezávislý trojčlenný tím z Bratislavy venujúci sa tvorbe videí, fotografii a grafickému dizajnu. Ponúkame kompletnú video produkciu, profesionálne fotografické služby aj nahrávanie vo vlastnom nahrávacom štúdiu a fotoateliéri."
+about_text: "Za sebou máme desiatky klipov a firemných videí, spoluprácu so značkami ako O2, Partners Group či BTS a s interpretmi Medial Banana alebo Dyzivv. Špecializujeme sa na produkciu, ktorá spája kreativitu s profesionálnym spracovaním."
 about_badge_1: "Od konceptu"
 about_badge_2: "po finálny strih"
 
@@ -21,8 +23,8 @@ portfolio_title: "Vybrané projekty"
 portfolio_subtitle: "Výber z realizovaných projektov — reklamné video, videoklipy, svadobné video a fotografia."
 portfolio_cta: "Chcem podobný projekt"
 
-testimonial_quote: "Objednali sme si reklamné video aj videoklip pre náš produkt — Crow Production zvládla oboje v jednom termíne a bez zbytočných kôl pripomienok."
-testimonial_author: "— Marketingový riaditeľ, klientská značka"
+reviews_eyebrow: "RECENZIE"
+reviews_title: "Čo o nás hovoria klienti"
 
 contact_eyebrow: "KONTAKT"
 contact_title_1: "Naplánujme vašu"

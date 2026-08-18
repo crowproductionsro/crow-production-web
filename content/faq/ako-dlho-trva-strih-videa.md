@@ -1,5 +1,7 @@
 ---
 title: "Ako dlho trvá strih videa?"
+category: "video"
+subcategory: "video-strih"
 weight: 1
 seo_title: "Ako dlho trvá strih videa? | Crow Production"
 meta_description: "Zistite, koľko trvá strih reklamného, firemného alebo svadobného videa u Crow Production."

@@ -1,14 +1,84 @@
 {{ define "main" }}
+{{ $current := . }}
+{{ $author := "" }}
+{{ with .Params.author }}{{ $author = index hugo.Data.authors . }}{{ end }}
+{{ $category := "" }}
+{{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
+{{ $subcategory := "" }}
+{{ with .Params.subcategory }}{{ $subcategory = index hugo.Data.subcategories . }}{{ end }}
+
 <section class="article-section">
   <div class="container article-wrap">
     <a href="/blog/" class="back-link">&larr; Späť na blog</a>
 
-    <span class="article-date">{{ partial "format-date.html" .Date }}</span>
+    {{ if $category }}
+    <span class="project-tag-single">{{ $category.name }}{{ with $subcategory }} · {{ .name }}{{ end }}</span>
+    {{ end }}
     <h1>{{ .Title }}</h1>
+
+    <div class="article-meta">
+      {{ if $author }}
+      <div class="article-meta-author">
+        {{ with $author.photo }}<img src="{{ . }}" alt="{{ $author.name }}">{{ end }}
+        <span>{{ $author.name }}</span>
+      </div>
+      <span class="article-meta-sep">·</span>
+      {{ end }}
+      <span>{{ partial "format-date.html" .Date }}</span>
+      <span class="article-meta-sep">·</span>
+      <span>{{ .ReadingTime }} min čítania</span>
+    </div>
+
+    {{ with .Params.cover_image }}
+    <img class="article-cover" src="{{ . }}" alt="{{ with $current.Params.cover_image_alt }}{{ . }}{{ else }}{{ $current.Title }}{{ end }}">
+    {{ end }}
+
+    {{ $toc := .TableOfContents }}
+    {{ if gt (len $toc) 60 }}
+    <div class="page-toc-wrap">
+      <span class="page-toc-label">Obsah článku</span>
+      {{ $toc }}
+    </div>
+    {{ end }}
 
     <div class="article-body">
       {{ .Content }}
     </div>
+
+    {{ if $author }}
+    <div class="author-box">
+      {{ with $author.photo }}<img src="{{ . }}" alt="{{ $author.name }}">{{ end }}
+      <div>
+        <span class="author-box-label">O autorovi</span>
+        <h3>{{ $author.name }}</h3>
+        {{ with $author.bio }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </div>
+    {{ end }}
   </div>
 </section>
+
+{{ $blogPages := (where (where site.RegularPages "Section" "blog") "RelPermalink" "!=" .RelPermalink).ByDate.Reverse }}
+{{ $sameCategory := where $blogPages "Params.category" .Params.category }}
+{{ $related := ($sameCategory | union $blogPages) | first 3 }}
+
+{{ if $related }}
+<section class="related-section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Podobné články</p>
+      <h2>Mohlo by vás zaujímať</h2>
+    </div>
+    <div class="blog-grid">
+      {{ range $related }}
+      <a href="{{ .RelPermalink }}" class="blog-card">
+        <span class="blog-card-date">{{ partial "format-date.html" .Date }}</span>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.summary }}</p>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 {{ end }}

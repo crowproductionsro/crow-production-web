@@ -1,10 +1,14 @@
 ---
 title: "Ako pripraviť scenár pre reklamný spot"
 date: 2026-06-12
+category: "video"
+subcategory: "video-natacanie"
+author: "crow-production"
 seo_title: "Ako pripraviť scenár pre reklamný spot | Crow Production"
 meta_description: "Krátky návod, ako pripraviť scenár pre reklamné video tak, aby natáčanie prebehlo bez zbytočných komplikácií."
 summary: "Dobrý scenár rozhoduje o tom, či natáčanie prebehne hladko. Tu je postup, ktorý používame pri príprave reklamných spotov."
 cover_image: ""
+cover_image_alt: ""
 draft: false
 ---
 
