@@ -1,12 +1,13 @@
 ---
-title: "Mestské svetlá"
-tag: "Fotografia"
-description: "Foto produkcia pre lifestylovú značku"
+title: Vajko
+tag: Fotografia
+description: Foto produkcia pre lifestylovú značku
 image: ""
 large: false
 weight: 4
-seo_title: "Mestské svetlá — foto produkcia | Crow Production"
-meta_description: "Foto produkcia Mestské svetlá pre lifestylovú značku — nočné mestské prostredie a produktová fotografia."
+seo_title: Mestské svetlá — foto produkcia | Crow Production
+meta_description: Foto produkcia Mestské svetlá pre lifestylovú značku — nočné
+  mestské prostredie a produktová fotografia.
 draft: false
 ---
 
