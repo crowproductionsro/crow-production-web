@@ -1,6 +1,6 @@
 ---
 title: "Mimo rytmu"
-tag: "Videoklip"
+category: "videoklip"
 description: "Hudobný videoklip pre slovenského interpréta"
 image: ""
 large: false

@@ -3,9 +3,9 @@
 {{ $author := "" }}
 {{ with .Params.author }}{{ $author = index hugo.Data.authors . }}{{ end }}
 {{ $category := "" }}
-{{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
+{{ with .Params.category }}{{ $category = index hugo.Data.blog_categories . }}{{ end }}
 {{ $subcategory := "" }}
-{{ with .Params.subcategory }}{{ $subcategory = index hugo.Data.subcategories . }}{{ end }}
+{{ with .Params.subcategory }}{{ $subcategory = index hugo.Data.blog_subcategories . }}{{ end }}
 
 <section class="article-section">
   <div class="container article-wrap">
@@ -84,7 +84,7 @@
     <div class="blog-grid">
       {{ range $related }}
       {{ $relCategory := "" }}
-      {{ with .Params.category }}{{ $relCategory = index hugo.Data.categories . }}{{ end }}
+      {{ with .Params.category }}{{ $relCategory = index hugo.Data.blog_categories . }}{{ end }}
       <a href="{{ .RelPermalink }}" class="blog-card">
         {{ with .Params.cover_image }}
         <img class="blog-card-thumb" src="{{ . }}" alt="">

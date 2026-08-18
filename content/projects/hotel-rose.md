@@ -1,6 +1,6 @@
 ---
 title: "Hotel Rose"
-tag: "Produktové video"
+category: "produktove-video"
 description: "Promo video pre hotelový rezort"
 image: ""
 large: false

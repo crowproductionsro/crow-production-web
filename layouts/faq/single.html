@@ -1,8 +1,8 @@
 {{ define "main" }}
 {{ $category := "" }}
-{{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
+{{ with .Params.category }}{{ $category = index hugo.Data.faq_categories . }}{{ end }}
 {{ $subcategory := "" }}
-{{ with .Params.subcategory }}{{ $subcategory = index hugo.Data.subcategories . }}{{ end }}
+{{ with .Params.subcategory }}{{ $subcategory = index hugo.Data.faq_subcategories . }}{{ end }}
 <section class="article-section">
   <div class="container faq-answer-wrap">
     <a href="/faq/" class="back-link">&larr; Späť na FAQ</a>

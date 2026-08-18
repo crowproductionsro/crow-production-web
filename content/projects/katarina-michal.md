@@ -1,6 +1,6 @@
 ---
 title: "Katarína & Michal"
-tag: "Svadobné video"
+category: "svadobne-video"
 description: "Svadobné video, Bratislava"
 image: ""
 large: false

@@ -21,16 +21,16 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Názov projektu", name: "title", widget: "string" }
+      - { label: "URL adresa (slug)", name: "slug", widget: "string", required: false, hint: "Časť webovej adresy za /projects/. Ak necháte prázdne, vygeneruje sa automaticky z názvu. Zmenou tu zmeníte aj skutočnú URL stránky." }
       - label: "Kategória"
-        name: "tag"
-        widget: "select"
-        options:
-          - "Reklamný spot"
-          - "Videoklip"
-          - "Svadobné video"
-          - "Produktové video"
-          - "Firemné video"
-          - "Fotografia"
+        name: "category"
+        widget: "relation"
+        collection: "project_categories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        required: false
+        hint: "Kategórie projektov spravujete v sekcii Kategórie projektov nižšie."
       - { label: "Krátky popis (na kartičke)", name: "description", widget: "string" }
       - { label: "Fotografia", name: "image", widget: "image", required: false }
       - { label: "Zvýrazniť ako veľkú dlaždicu na hlavnej stránke", name: "large", widget: "boolean", default: false }
@@ -40,6 +40,17 @@ collections:
       - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má projekt dočasne skryť z webu." }
       - { label: "Detailný popis projektu", name: "body", widget: "markdown", required: false }
 
+  - name: "project_categories"
+    label: "Kategórie projektov"
+    label_singular: "Kategória projektu"
+    folder: "data/project_categories"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    format: "yaml"
+    fields:
+      - { label: "Názov kategórie", name: "name", widget: "string" }
+
   - name: "blog"
     label: "Blog"
     label_singular: "Článok"
@@ -48,25 +59,26 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Titulok článku", name: "title", widget: "string" }
+      - { label: "URL adresa (slug)", name: "slug", widget: "string", required: false, hint: "Časť webovej adresy za /blog/. Ak necháte prázdne, vygeneruje sa automaticky z titulku. Zmenou tu zmeníte aj skutočnú URL článku." }
       - { label: "Dátum publikovania", name: "date", widget: "datetime" }
       - label: "Kategória"
         name: "category"
         widget: "relation"
-        collection: "categories"
+        collection: "blog_categories"
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
         required: false
-        hint: "Kategórie spravujete v sekcii Kategórie nižšie."
+        hint: "Kategórie blogu spravujete v sekcii Kategórie blogu nižšie."
       - label: "Podkategória"
         name: "subcategory"
         widget: "relation"
-        collection: "subcategories"
+        collection: "blog_subcategories"
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
         required: false
-        hint: "Podkategórie spravujete v sekcii Podkategórie nižšie. Vyberte tú, ktorá patrí k zvolenej kategórii."
+        hint: "Podkategórie blogu spravujete v sekcii Podkategórie blogu nižšie. Vyberte tú, ktorá patrí k zvolenej kategórii."
       - label: "Autor"
         name: "author"
         widget: "relation"
@@ -107,10 +119,10 @@ collections:
           - { label: "Fotografia", name: "image", widget: "image" }
           - { label: "ALT text", name: "alt", widget: "string", required: false }
 
-  - name: "categories"
-    label: "Kategórie (Blog aj FAQ)"
-    label_singular: "Kategória"
-    folder: "data/categories"
+  - name: "blog_categories"
+    label: "Kategórie blogu"
+    label_singular: "Kategória blogu"
+    folder: "data/blog_categories"
     create: true
     slug: "{{slug}}"
     identifier_field: "name"
@@ -118,10 +130,10 @@ collections:
     fields:
       - { label: "Názov kategórie", name: "name", widget: "string" }
 
-  - name: "subcategories"
-    label: "Podkategórie (Blog aj FAQ)"
-    label_singular: "Podkategória"
-    folder: "data/subcategories"
+  - name: "blog_subcategories"
+    label: "Podkategórie blogu"
+    label_singular: "Podkategória blogu"
+    folder: "data/blog_subcategories"
     create: true
     slug: "{{slug}}"
     identifier_field: "name"
@@ -131,7 +143,7 @@ collections:
       - label: "Nadradená kategória"
         name: "category"
         widget: "relation"
-        collection: "categories"
+        collection: "blog_categories"
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
@@ -157,26 +169,56 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Otázka", name: "title", widget: "string" }
+      - { label: "URL adresa (slug)", name: "slug", widget: "string", required: false, hint: "Časť webovej adresy za /faq/. Ak necháte prázdne, vygeneruje sa automaticky z otázky. Zmenou tu zmeníte aj skutočnú URL otázky." }
       - label: "Kategória"
         name: "category"
         widget: "relation"
-        collection: "categories"
+        collection: "faq_categories"
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
         required: false
-        hint: "Kategórie spravujete v sekcii Kategórie."
+        hint: "Kategórie FAQ spravujete v sekcii Kategórie FAQ."
       - label: "Podkategória"
         name: "subcategory"
         widget: "relation"
-        collection: "subcategories"
+        collection: "faq_subcategories"
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
         required: false
-        hint: "Podkategórie spravujete v sekcii Podkategórie. Vyberte tú, ktorá patrí k zvolenej kategórii."
+        hint: "Podkategórie FAQ spravujete v sekcii Podkategórie FAQ. Vyberte tú, ktorá patrí k zvolenej kategórii."
       - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa otázka." }
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
       - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má otázka dočasne skryť z webu." }
       - { label: "Odpoveď", name: "body", widget: "markdown" }
+
+  - name: "faq_categories"
+    label: "Kategórie FAQ"
+    label_singular: "Kategória FAQ"
+    folder: "data/faq_categories"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    format: "yaml"
+    fields:
+      - { label: "Názov kategórie", name: "name", widget: "string" }
+
+  - name: "faq_subcategories"
+    label: "Podkategórie FAQ"
+    label_singular: "Podkategória FAQ"
+    folder: "data/faq_subcategories"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    format: "yaml"
+    fields:
+      - { label: "Názov podkategórie", name: "name", widget: "string" }
+      - label: "Nadradená kategória"
+        name: "category"
+        widget: "relation"
+        collection: "faq_categories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]

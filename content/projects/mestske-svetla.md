@@ -1,6 +1,6 @@
 ---
 title: Vajko
-tag: Fotografia
+category: "fotografia"
 description: Foto produkcia pre lifestylovú značku
 image: ""
 large: false

@@ -13,7 +13,7 @@
 
     <div class="blog-filters" id="blogFilters">
       <button type="button" class="blog-filter-btn active" data-filter="all">Všetky</button>
-      {{ range $slug, $cat := hugo.Data.categories }}
+      {{ range $slug, $cat := hugo.Data.blog_categories }}
       {{ if where $pages "Params.category" $slug }}
       <button type="button" class="blog-filter-btn" data-filter="{{ $slug }}">{{ $cat.name }}</button>
       {{ end }}
@@ -23,7 +23,7 @@
     <div class="blog-grid" id="blogGrid">
       {{ range $pages }}
       {{ $category := "" }}
-      {{ with .Params.category }}{{ $category = index hugo.Data.categories . }}{{ end }}
+      {{ with .Params.category }}{{ $category = index hugo.Data.blog_categories . }}{{ end }}
       <a href="{{ .RelPermalink }}" class="blog-card"{{ with .Params.category }} data-category="{{ . }}"{{ end }}>
         {{ $img := .Params.cover_image }}
         {{ $alt := .Params.cover_image_alt }}

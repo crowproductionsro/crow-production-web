@@ -8,6 +8,8 @@
 
     <div class="portfolio-grid">
       {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
+      {{ $cat := "" }}
+      {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
       <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
         {{ if $p.Params.image }}
         <img class="portfolio-thumb" src="{{ $p.Params.image }}" alt="{{ $p.Title }}">
@@ -15,7 +17,7 @@
         <div class="portfolio-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
         {{ end }}
         <div class="portfolio-info">
-          <span class="portfolio-tag">{{ $p.Params.tag }}</span>
+          <span class="portfolio-tag">{{ with $cat }}{{ .name }}{{ end }}</span>
           <h3>{{ $p.Title }}</h3>
           <p>{{ $p.Params.description }}</p>
         </div>

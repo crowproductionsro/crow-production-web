@@ -1,6 +1,6 @@
 ---
 title: Sury je kokot
-tag: Reklamný spot
+category: "reklamny-spot"
 description: Kampaň pre automobilovú značku
 image: /img/uploads/ca0ad885-2ec1-4a53-a85b-a179c78335a9.png
 large: true
