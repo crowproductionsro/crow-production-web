@@ -6,7 +6,7 @@ description: Produkcia promo videa prę TOP Auto a Land Rover
 image: /img/uploads/landrover.jpg.webp
 youtube_video: https://www.youtube.com/watch?v=IrbzOeAhDuM
 large: true
-weight: 3
+weight: 1
 seo_title: Range Rover SV | svet vo svete
 meta_description: Zažite čistý luxus a atmosféru pred úsvitom v našom novom
   kinematografickom videu s Range Rover SV. Pozrite si exkupluzívne zábery z
