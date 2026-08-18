@@ -2,7 +2,7 @@
 title: Range Rover SV | svet vo svete
 slug: range-rover-sv
 category: produktove-video
-description: Promo video pre hotelový rezort
+description: Produkcia promo videa prę TOP Auto a Land Rover
 image: /img/uploads/landrover.jpg.webp
 large: false
 weight: 3
