@@ -33,6 +33,8 @@
     <img class="article-cover" src="{{ . }}" alt="{{ with $current.Params.cover_image_alt }}{{ . }}{{ else }}{{ $current.Title }}{{ end }}">
     {{ end }}
 
+    {{ with .Params.youtube_video }}{{ partial "youtube-embed.html" . }}{{ end }}
+
     {{ $toc := .TableOfContents }}
     {{ if gt (len $toc) 60 }}
     <div class="page-toc-wrap">

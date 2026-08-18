@@ -1,0 +1,16 @@
+{{- $url := . -}}
+{{- $id := "" -}}
+{{- if in $url "youtu.be/" -}}
+  {{- $id = index (split (index (split $url "youtu.be/") 1) "?") 0 -}}
+{{- else if in $url "watch?v=" -}}
+  {{- $id = index (split (index (split $url "watch?v=") 1) "&") 0 -}}
+{{- else if in $url "youtube.com/embed/" -}}
+  {{- $id = index (split (index (split $url "youtube.com/embed/") 1) "?") 0 -}}
+{{- else if in $url "youtube.com/shorts/" -}}
+  {{- $id = index (split (index (split $url "youtube.com/shorts/") 1) "?") 0 -}}
+{{- end -}}
+{{- if $id -}}
+<div class="youtube-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ $id }}" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+</div>
+{{- end -}}

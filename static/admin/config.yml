@@ -33,6 +33,7 @@ collections:
         hint: "Kategórie projektov spravujete v sekcii „🎬 Projekty — Kategórie“."
       - { label: "Krátky popis (na kartičke)", name: "description", widget: "string" }
       - { label: "Fotografia", name: "image", widget: "image", required: false }
+      - { label: "YouTube video", name: "youtube_video", widget: "string", required: false, hint: "Vložte celú adresu YouTube videa (napr. https://www.youtube.com/watch?v=... alebo https://youtu.be/...). Ak je vyplnené, na stránke projektu sa zobrazí namiesto fotografie." }
       - { label: "Zvýrazniť ako veľkú dlaždicu na hlavnej stránke", name: "large", widget: "boolean", default: false }
       - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa názov projektu." }
@@ -92,6 +93,7 @@ collections:
       - { label: "Krátky popis (na výpise blogu)", name: "summary", widget: "text" }
       - { label: "Titulná fotografia", name: "cover_image", widget: "image", required: false }
       - { label: "ALT text titulnej fotografie", name: "cover_image_alt", widget: "string", required: false, hint: "Krátky popis fotky pre nevidiacich a SEO, napr. „Natáčanie reklamného spotu v štúdiu“." }
+      - { label: "YouTube video", name: "youtube_video", widget: "string", required: false, hint: "Vložte celú adresu YouTube videa (napr. https://www.youtube.com/watch?v=... alebo https://youtu.be/...). Zobrazí sa pod titulnou fotografiou článku." }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa titulok článku." }
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
       - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má článok dočasne skryť z webu." }
