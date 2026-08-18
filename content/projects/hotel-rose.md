@@ -1,13 +1,19 @@
 ---
-title: "Hotel Rose"
-category: "produktove-video"
-description: "Promo video pre hotelový rezort"
-image: ""
+title: Range Rover SV | svet vo svete
+slug: range-rover-sv
+category: produktove-video
+description: Promo video pre hotelový rezort
+image: /img/uploads/landrover.jpg.webp
 large: false
 weight: 3
-seo_title: "Hotel Rose — promo video | Crow Production"
-meta_description: "Produktové video pre hotelový rezort Hotel Rose — natáčanie interiérov, exteriérov a služieb hotela."
+seo_title: Range Rover SV | svet vo svete
+meta_description: Produkcia promo videa je TOP Auto a Land Rover
 draft: false
 ---
+Promo video pre TOP Auto a Range Rover. Zachytili sme prémiový diazjn modelu SV.
 
-Promo video pre hotelový rezort Hotel Rose. Zachytili sme izby, spoločné priestory aj služby hotela tak, aby video slúžilo priamo na webe a sociálnych sieťach klienta.
+
+
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IrbzOeAhDuM?si=VldOJxXKEXstVNAL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
