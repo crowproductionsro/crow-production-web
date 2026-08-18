@@ -4,6 +4,7 @@ slug: range-rover-sv
 category: produktove-video
 description: Produkcia promo videa prę TOP Auto a Land Rover
 image: /img/uploads/landrover.jpg.webp
+youtube_video: https://www.youtube.com/watch?v=IrbzOeAhDuM
 large: false
 weight: 3
 seo_title: Range Rover SV | svet vo svete
