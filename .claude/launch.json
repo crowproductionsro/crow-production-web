@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hugo-preview",
+      "runtimeExecutable": "bin/hugo",
+      "runtimeArgs": ["server", "--port", "8791", "--bind", "127.0.0.1", "--disableFastRender"],
+      "port": 8791
+    }
+  ]
+}

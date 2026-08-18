@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+locale: "sk"
+
+collections:
+  - name: "projects"
+    label: "Projekty"
+    label_singular: "Projekt"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Názov projektu", name: "title", widget: "string" }
+      - label: "Kategória"
+        name: "tag"
+        widget: "select"
+        options:
+          - "Reklamný spot"
+          - "Videoklip"
+          - "Svadobné video"
+          - "Produktové video"
+          - "Firemné video"
+          - "Fotografia"
+      - { label: "Krátky popis (na kartičke)", name: "description", widget: "string" }
+      - { label: "Fotografia", name: "image", widget: "image", required: false }
+      - { label: "Zvýrazniť ako veľkú dlaždicu na hlavnej stránke", name: "large", widget: "boolean", default: false }
+      - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
+      - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa názov projektu." }
+      - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
+      - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má projekt dočasne skryť z webu." }
+      - { label: "Detailný popis projektu", name: "body", widget: "markdown", required: false }
+
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Článok"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titulok článku", name: "title", widget: "string" }
+      - { label: "Dátum publikovania", name: "date", widget: "datetime" }
+      - { label: "Krátky popis (na výpise blogu)", name: "summary", widget: "text" }
+      - { label: "Titulná fotografia", name: "cover_image", widget: "image", required: false }
+      - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa titulok článku." }
+      - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
+      - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má článok dočasne skryť z webu." }
+      - { label: "Obsah článku", name: "body", widget: "markdown" }
+
+  - name: "faq"
+    label: "FAQ"
+    label_singular: "Otázka"
+    folder: "content/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Otázka", name: "title", widget: "string" }
+      - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
+      - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa otázka." }
+      - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
+      - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má otázka dočasne skryť z webu." }
+      - { label: "Odpoveď", name: "body", widget: "markdown" }

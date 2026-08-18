@@ -1,0 +1,48 @@
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-text">
+      <p class="eyebrow">{{ .Params.contact_eyebrow }}</p>
+      <h2>{{ .Params.contact_title_1 }}<br>{{ .Params.contact_title_2 }}</h2>
+      <p class="section-sub">{{ .Params.contact_subtitle }}</p>
+
+      <div class="contact-details">
+        <div class="contact-detail">
+          <span class="detail-label">E-mail</span>
+          <a href="mailto:{{ .Params.contact_email }}">{{ .Params.contact_email }}</a>
+        </div>
+        <div class="contact-detail">
+          <span class="detail-label">Sociálne siete</span>
+          <div class="social-links">
+            {{ range .Params.socials }}
+            <a href="{{ .url }}">{{ .name }}</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-row">
+        <label for="name">Meno a priezvisko</label>
+        <input type="text" id="name" name="name" placeholder="Vaše meno" required>
+      </div>
+      <div class="form-row">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="vas@email.sk" required>
+      </div>
+      <div class="form-row">
+        <label for="project">Typ projektu</label>
+        <select id="project" name="project">
+          {{ range .Params.project_types }}
+          <option>{{ . }}</option>
+          {{ end }}
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Správa</label>
+        <textarea id="message" name="message" rows="4" placeholder="Povedzte nám o vašom projekte..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Odoslať správu</button>
+    </form>
+  </div>
+</section>

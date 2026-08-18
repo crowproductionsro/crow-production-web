@@ -1,0 +1,27 @@
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{{ .Params.portfolio_eyebrow }}</p>
+      <h2>{{ .Params.portfolio_title }}</h2>
+      <p class="section-sub">{{ .Params.portfolio_subtitle }}</p>
+    </div>
+
+    <div class="portfolio-grid">
+      {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
+      <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
+        <div class="portfolio-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
+        <div class="portfolio-info">
+          <span class="portfolio-tag">{{ $p.Params.tag }}</span>
+          <h3>{{ $p.Title }}</h3>
+          <p>{{ $p.Params.description }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+
+    <div class="portfolio-cta">
+      <a href="/projects/" class="btn btn-outline">Zobraziť všetky projekty</a>
+      <a href="#contact" class="btn btn-ghost">{{ .Params.portfolio_cta }}</a>
+    </div>
+  </div>
+</section>

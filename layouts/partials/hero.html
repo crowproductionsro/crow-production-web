@@ -1,0 +1,21 @@
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1 class="hero-title reveal">{{ .Params.hero_title_1 }}<br>{{ .Params.hero_title_2 }} <span>{{ .Params.hero_highlight }}</span></h1>
+    <p class="hero-sub reveal">{{ .Params.hero_subtitle }}</p>
+    <div class="hero-actions reveal">
+      <a href="#portfolio" class="btn btn-primary">Pozrieť portfólio</a>
+      <a href="#contact" class="btn btn-ghost">Kontaktujte nás</a>
+    </div>
+  </div>
+
+  <div class="hero-quote">
+    <p>{{ .Params.hero_quote }}</p>
+    <span>{{ .Site.Title }}</span>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Posunúť nižšie">
+    <span></span>
+  </a>
+</section>

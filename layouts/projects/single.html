@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ $w := .Params.weight | default 1 }}
+{{ $n := add (mod (sub (int $w) 1) 5) 1 }}
+<section class="project-section">
+  <div class="container project-wrap">
+    <a href="/projects/" class="back-link">&larr; Späť na projekty</a>
+
+    <span class="project-tag-single">{{ .Params.tag }}</span>
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Params.image }}
+    <img class="project-media" src="{{ .Params.image }}" alt="{{ .Title }}">
+    {{ else }}
+    <div class="project-media thumb-{{ $n }}"></div>
+    {{ end }}
+
+    <div class="project-body article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

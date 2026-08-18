@@ -1,0 +1,39 @@
+<section class="about" id="about">
+  <div class="container about-inner">
+    <div class="about-text">
+      <p class="eyebrow">{{ .Params.about_eyebrow }}</p>
+      <h2>{{ .Params.about_title_1 }}<br>{{ .Params.about_title_2 }}</h2>
+      <p class="about-lead">{{ .Params.about_lead }}</p>
+      <p>{{ .Params.about_text }}</p>
+
+      <div class="about-stats">
+        {{ range hugo.Data.stats }}
+        <div class="stat">
+          <span class="stat-num">{{ .number }}</span>
+          <span class="stat-label">{{ .label }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="about-visual">
+      <div class="about-frame frame-1"></div>
+      <div class="about-frame frame-2"></div>
+      <div class="about-badge">
+        <strong>{{ .Params.about_badge_1 }}<br>{{ .Params.about_badge_2 }}</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="services">
+    <div class="container services-grid">
+      {{ range hugo.Data.services }}
+      <div class="service-card">
+        <span class="service-num">{{ .number }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

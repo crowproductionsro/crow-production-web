@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ .Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="section-sub">{{ .Params.lead }}</p>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-list">
+      {{ range .Pages.ByWeight }}
+      <a href="{{ .RelPermalink }}" class="faq-item">
+        <h3>{{ .Title }}</h3>
+        <span class="faq-arrow">&rarr;</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

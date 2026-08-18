@@ -1,0 +1,17 @@
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="/#home" class="logo">CROW<span>PRODUCTION</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+
+    <a href="/#contact" class="btn btn-outline header-cta">Nezáväzná ponuka</a>
+
+    <button class="burger" id="burgerBtn" aria-label="Otvoriť menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

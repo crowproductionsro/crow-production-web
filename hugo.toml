@@ -1,0 +1,41 @@
+baseURL = "https://www.crowproduction.sk/"
+locale = "sk_SK"
+title = "Crow Production"
+
+enableRobotsTXT = true
+summaryLength = 20
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  email = "info@crowproduction.sk"
+  description = "Crow Production — video produkcia a fotografické služby. Natáčame reklamné video, videoklipy, svadobné video, firemné video a fotografiu."
+
+[[menu.main]]
+  name = "Domov"
+  url = "/#home"
+  weight = 1
+
+[[menu.main]]
+  name = "O nás"
+  url = "/#about"
+  weight = 2
+
+[[menu.main]]
+  name = "Projekty"
+  url = "/projects/"
+  weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
+
+[[menu.main]]
+  name = "FAQ"
+  url = "/faq/"
+  weight = 5
+
+[[menu.main]]
+  name = "Kontakt"
+  url = "/#contact"
+  weight = 6

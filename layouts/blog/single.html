@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="article-section">
+  <div class="container article-wrap">
+    <a href="/blog/" class="back-link">&larr; Späť na blog</a>
+
+    <span class="article-date">{{ partial "format-date.html" .Date }}</span>
+    <h1>{{ .Title }}</h1>
+
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
