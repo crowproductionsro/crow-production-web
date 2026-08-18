@@ -1,12 +1,13 @@
 ---
-title: "Nočná jazda"
-tag: "Reklamný spot"
-description: "Kampaň pre automobilovú značku"
+title: Sury je kokot
+tag: Reklamný spot
+description: Kampaň pre automobilovú značku
 image: ""
 large: true
 weight: 1
-seo_title: "Nočná jazda — reklamný spot | Crow Production"
-meta_description: "Reklamný spot Nočná jazda — video produkcia pre automobilovú značku od Crow Production."
+seo_title: Nočná jazda — reklamný spot | Crow Production
+meta_description: Reklamný spot Nočná jazda — video produkcia pre automobilovú
+  značku od Crow Production.
 draft: false
 ---
 
