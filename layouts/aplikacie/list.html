@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ .Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="section-sub">{{ .Params.lead }}</p>
+  </div>
+</section>
+
+<section class="apps-section">
+  <div class="container">
+    <div class="apps-grid">
+      {{ range hugo.Data.apps }}
+      <a href="{{ .url }}" class="app-card" target="_blank" rel="noopener noreferrer">
+        {{ with .icon }}<img class="app-card-icon" src="{{ . }}" alt="">{{ end }}
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <span class="app-card-link">Otvoriť aplikáciu &rarr;</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1191,3 +1191,49 @@ h3 { font-size: 1.4rem; }
   .cookie-banner-actions { width: 100%; }
   .cookie-banner-actions .btn { flex: 1; text-align: center; }
 }
+
+/* Apps hub */
+
+.apps-section { padding: 90px 0 140px; }
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.app-card {
+  display: block;
+  background: var(--color-dark-3);
+  border: 1px solid rgba(218,218,218,0.08);
+  border-radius: 8px;
+  padding: 36px 32px;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.app-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.3);
+}
+.app-card-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.app-card h3 { margin-bottom: 10px; }
+.app-card p { color: var(--color-grey-mid); font-size: 0.92rem; margin-bottom: 20px; }
+.app-card-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+@media (max-width: 1024px) {
+  .apps-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .apps-grid { grid-template-columns: 1fr; }
+}

@@ -232,3 +232,18 @@ collections:
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
+
+  - name: "apps"
+    label: "🧰 Aplikácie"
+    label_singular: "Aplikácia"
+    folder: "data/apps"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    format: "yaml"
+    extension: "yaml"
+    fields:
+      - { label: "Názov aplikácie", name: "name", widget: "string" }
+      - { label: "Popis", name: "description", widget: "text" }
+      - { label: "Adresa (URL)", name: "url", widget: "string", hint: "Celá adresa vrátane https://, napr. https://opti.crowproduction.sk" }
+      - { label: "Ikona (voliteľné)", name: "icon", widget: "image", required: false }

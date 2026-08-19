@@ -31,11 +31,16 @@ disableKinds = ["taxonomy", "term"]
   weight = 4
 
 [[menu.main]]
+  name = "Aplikácie"
+  url = "/aplikacie/"
+  weight = 5
+
+[[menu.main]]
   name = "FAQ"
   url = "/faq/"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
   name = "Kontakt"
   url = "/#contact"
-  weight = 6
+  weight = 7
