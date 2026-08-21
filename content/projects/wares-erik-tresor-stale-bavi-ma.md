@@ -1,0 +1,14 @@
+---
+title: "WARES feat. Erik Tresor — Stále baví má"
+category: "videoklip"
+description: "Oficiálny videoklip, prod. Hoodini"
+image: ""
+youtube_video: "https://www.youtube.com/watch?v=8sD5t8khlEY"
+large: false
+weight: 6
+seo_title: "WARES feat. Erik Tresor — Stále baví má | Crow Production"
+meta_description: "Oficiálny videoklip WARES feat. Erik Tresor — Stále baví má (prod. Hoodini) od Crow Production."
+draft: false
+---
+
+Oficiálny videoklip pre skladbu WARES feat. Erik Tresor — Stále baví má, produkcia Hoodini.
