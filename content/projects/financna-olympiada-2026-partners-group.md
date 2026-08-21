@@ -2,7 +2,7 @@
 title: "Finančná olympiáda 2026 — Partners Group"
 category: "event"
 description: "Event video pre Partners Group"
-image: ""
+image: "/img/uploads/partner_group_video.png"
 youtube_video: "https://youtu.be/J2wx7klRBrs?si=HCWL-RQQlZNaG98r"
 large: false
 weight: 2
