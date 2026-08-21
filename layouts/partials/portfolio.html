@@ -10,9 +10,13 @@
       {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
       {{ $cat := "" }}
       {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
+      {{ $ytID := "" }}
+      {{ with $p.Params.youtube_video }}{{ $ytID = partial "youtube-id.html" . }}{{ end }}
       <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
         {{ if $p.Params.image }}
         <img class="portfolio-thumb" src="{{ $p.Params.image }}" alt="{{ $p.Title }}">
+        {{ else if $ytID }}
+        <img class="portfolio-thumb" src="https://img.youtube.com/vi/{{ $ytID }}/hqdefault.jpg" alt="{{ $p.Title }}">
         {{ else }}
         <div class="portfolio-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
         {{ end }}
