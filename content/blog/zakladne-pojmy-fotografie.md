@@ -9,6 +9,19 @@ summary: "ISO, clona, uzávierka, ohnisková vzdialenosť, vyváženie bielej aj
 cover_image: "/img/uploads/zakladne_pojmy_fotoaparat_thumbnail.webp"
 cover_image_alt: "Základné pojmy — ISO, uzávierka, clona, vyváženie bielej a ohnisková vzdialenosť"
 draft: false
+faq:
+  - question: "Aký parameter je najdôležitejší — ISO, clona alebo uzávierka?"
+    answer: "Žiadny z nich nie je najdôležitejší sám osebe. ISO, clona a uzávierka spolu tvoria takzvaný expozičný trojuholník a vždy sa vzájomne ovplyvňujú. Dôležité je vedieť, ktorý parameter zmeniť podľa situácie — napríklad pri pohybe uprednostníš uzávierku, pri portréte clonu a pri slabom svetle ISO."
+  - question: "Aké ISO je najlepšie pre bežné fotenie?"
+    answer: "Za dobrého denného svetla drž ISO čo najnižšie, ideálne 100 až 200 — obraz bude čistý, bez šumu. ISO zvyšuj až vtedy, keď ti clona a uzávierka nestačia na dostatočné osvetlenie snímky."
+  - question: "Čo je hĺbka ostrosti a ako ju ovplyvňuje clona?"
+    answer: "Hĺbka ostrosti určuje, aká veľká časť fotografie je ostrá. Väčšia clona (menšie f/číslo, napríklad f/1.8) dá plytkú hĺbku ostrosti a rozmazané pozadie, menšia clona (väčšie f/číslo, napríklad f/11) naopak udrží ostré celé zábery od popredia po pozadie."
+  - question: "Prečo mám na fotkách rozmazaný pohyb?"
+    answer: "Najčastejšie za to môže príliš pomalá uzávierka. Ak fotíš pohybujúci sa objekt, skús rýchlejší čas uzávierky, napríklad 1/500s alebo 1/1000s, aby si pohyb zmrazil."
+  - question: "Musím vyváženie bielej nastavovať vždy ručne?"
+    answer: "Nie, automatické vyváženie bielej (AWB) si väčšinou poradí samo. Ručné nastavenie sa oplatí až pri zmiešanom alebo nezvyčajnom osvetlení, kde chceš mať farby čo najpresnejšie."
+  - question: "Aký objektív je najlepší na portréty?"
+    answer: "Na portréty sa najčastejšie používa objektív s dlhšou ohniskovou vzdialenosťou, napríklad 85mm, v kombinácii s väčšou clonou (f/1.8 – f/2.8). Táto kombinácia pekne rozmaže pozadie a nezdeformuje tvár tak, ako to robia širokouhlé objektívy."
 ---
 
 Ak si začínajúci fotograf, možno sa ti zdá svet fotografie plný zložitých pojmov a technických termínov. Aby som ti pomohol lepšie pochopiť základy, pripravil som tohto rýchleho sprievodcu, ktorý vysvetľuje niektoré z najdôležitejších fotografických pojmov.

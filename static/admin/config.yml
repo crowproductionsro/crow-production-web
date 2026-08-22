@@ -129,6 +129,14 @@ collections:
         fields:
           - { label: "Fotografia", name: "image", widget: "image" }
           - { label: "ALT text", name: "alt", widget: "string", required: false }
+      - label: "FAQ k článku"
+        name: "faq"
+        widget: "list"
+        required: false
+        hint: "Rozklikávacie otázky a odpovede na konci článku — pomáhajú SEO aj AI vyhľadávačom (AEO). Odpoveď píšte ako krátky, priamy text."
+        fields:
+          - { label: "Otázka", name: "question", widget: "string" }
+          - { label: "Odpoveď", name: "answer", widget: "text" }
 
   - name: "blog_categories"
     label: "📝 Blog — Kategórie"
