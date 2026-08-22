@@ -3,7 +3,6 @@
 {{ $n := add (mod (sub (int $w) 1) 5) 1 }}
 {{ $cat := "" }}
 {{ with .Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
-{{ $isVideoklip := eq .Params.category "videoklip" }}
 <section class="project-section">
   <div class="container project-wrap">
     <a href="/projects/" class="back-link">&larr; Späť na projekty</a>
@@ -11,9 +10,7 @@
     {{ with $cat }}<span class="project-tag-single">{{ .name }}</span>{{ end }}
     <h1>{{ .Title }}</h1>
 
-    {{ if and .Params.image (not $isVideoklip) }}
-    <img class="project-media" src="{{ .Params.image }}" alt="{{ .Title }}">
-    {{ else if not .Params.youtube_video }}
+    {{ if not .Params.youtube_video }}
     <div class="project-media thumb-{{ $n }}"></div>
     {{ end }}
 
