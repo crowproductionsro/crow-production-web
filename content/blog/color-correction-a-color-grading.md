@@ -9,6 +9,17 @@ summary: "Color correction a color grading sa často zamieňajú. Vysvetľujeme 
 cover_image: "/img/uploads/rozdiel_color_correction_grading_thumb.webp"
 cover_image_alt: "Porovnanie clean, color correction a color grading verzie záberu"
 draft: false
+faq:
+  - question: "Aký je hlavný rozdiel medzi color correction a color gradingom?"
+    answer: "Color correction opravuje technické nedostatky záberu (vyváženie bielej, expozícia, biele a čierne body), aby vyzeral prirodzene. Color grading je naopak kreatívny krok, ktorý zámerne mení farby a náladu záberu, aby podporil štýl alebo príbeh."
+  - question: "Robí sa najprv color correction alebo color grading?"
+    answer: "Vždy najprv color correction. Až keď má záber vyrovnané a prirodzené farby, dáva zmysel na neho aplikovať color grading — inak by sa kreatívny look staval na nesprávnom farebnom základe."
+  - question: "Dá sa color grading urobiť aj bez predchádzajúcej korekcie farieb?"
+    answer: "Technicky áno, ale výsledok bude menej konzistentný. Bez korekcie sa chyby z natáčania (napríklad zlé vyváženie bielej) prenesú aj do finálneho vzhľadu a je ťažšie dosiahnuť rovnaký look naprieč všetkými zábermi."
+  - question: "Používa sa color grading len pri videu, alebo aj pri fotografii?"
+    answer: "Používa sa pri oboch. Princíp je rovnaký — najprv sa farby technicky opravia, potom sa im dá štýl. Pri fotografii sa color grading často robí priamo v programoch ako Lightroom alebo Photoshop."
+  - question: "Ovplyvňuje osvetlenie pri natáčaní, koľko sa dá neskôr v postprodukcii opraviť?"
+    answer: "Áno, výrazne. Dobre nasvietený a správne exponovaný záber dáva pri color gradingu oveľa viac priestoru na kreatívne úpravy. Ak je záber podexponovaný alebo má zlé vyváženie bielej, obmedzuje to, aký look sa z neho dá neskôr vytvoriť."
 ---
 
 Dnes sa ponoríme do sveta farieb a vysvetlíme si dva pojmy, ktoré sa často zamieňajú – color correction (korekcia farieb) a color grading (farebná úprava). Ak sa zaujímaš o editovanie videí a fotiek, tieto dva procesy sú kľúčové pre dosiahnutie profesionálneho výsledku. Poďme sa teda pozrieť na to, aký je medzi nimi rozdiel.
