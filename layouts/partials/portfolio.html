@@ -7,7 +7,8 @@
     </div>
 
     <div class="portfolio-grid">
-      {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
+      {{ $featured := (where (where site.RegularPages "Section" "projects") "Params.featured_home" true).ByWeight | first 6 }}
+      {{ range $i, $p := $featured }}
       {{ $cat := "" }}
       {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
       {{ $ytID := "" }}

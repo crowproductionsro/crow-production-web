@@ -6,6 +6,8 @@ description: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
 image: /img/uploads/realita00094424.jpg.webp
 youtube_video: https://www.youtube.com/watch?v=AZuZD_qSs5c
 large: false
+featured_home: true
+group: "Video"
 weight: 3
 seo_title: ADRIAN, ČIS T & KALI – Vitaj v realite 2 (prod. Hoodini)
 meta_description: Reklamný spot Nočná jazda — video produkcia pre automobilovú

@@ -7,10 +7,19 @@
   </div>
 </section>
 
-<section class="portfolio">
+{{ $allProjects := .Pages.ByWeight }}
+{{ $groups := slice "Video" "Foto" "Web & dizajn" }}
+
+{{ range $gi, $group := $groups }}
+{{ $groupProjects := where $allProjects "Params.group" $group }}
+{{ if $groupProjects }}
+<section class="portfolio project-group{{ if eq $gi 0 }} project-group-first{{ end }}">
   <div class="container">
+    <div class="section-head">
+      <h2>{{ $group }}</h2>
+    </div>
     <div class="portfolio-grid">
-      {{ range $i, $p := .Pages.ByWeight }}
+      {{ range $i, $p := $groupProjects }}
       {{ $cat := "" }}
       {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
       {{ $ytID := "" }}
@@ -33,4 +42,6 @@
     </div>
   </div>
 </section>
+{{ end }}
+{{ end }}
 {{ end }}

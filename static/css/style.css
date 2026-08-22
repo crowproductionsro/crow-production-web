@@ -515,6 +515,10 @@ h3 { font-size: 1.4rem; }
 
 .portfolio-cta { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 64px; }
 
+.project-group { padding: 0 0 80px; }
+.project-group .section-head { margin-bottom: 40px; }
+.project-group-first { padding-top: 90px; }
+
 /* ============================================
    TESTIMONIAL
 ============================================ */

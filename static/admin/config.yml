@@ -35,6 +35,13 @@ collections:
       - { label: "Fotografia", name: "image", widget: "image", required: false }
       - { label: "YouTube video", name: "youtube_video", widget: "string", required: false, hint: "Vložte celú adresu YouTube videa (napr. https://www.youtube.com/watch?v=... alebo https://youtu.be/...). Ak je vyplnené, na stránke projektu sa zobrazí namiesto fotografie." }
       - { label: "Zvýrazniť ako veľkú dlaždicu na hlavnej stránke", name: "large", widget: "boolean", default: false }
+      - { label: "Zobraziť na hlavnej stránke", name: "featured_home", widget: "boolean", default: false, hint: "Na hlavnej stránke sa v sekcii „Vybrané projekty“ zobrazuje maximálne 6 projektov (podľa poradia zobrazenia)." }
+      - label: "Skupina (na stránke Projekty)"
+        name: "group"
+        widget: "select"
+        default: "Video"
+        options: ["Video", "Foto", "Web & dizajn"]
+        hint: "Určuje, do ktorej sekcie na stránke Projekty projekt patrí."
       - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa názov projektu." }
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }

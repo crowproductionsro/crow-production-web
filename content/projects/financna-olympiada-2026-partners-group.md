@@ -5,6 +5,8 @@ description: "Video a foto produkcia eventu Finančná olympiáda 2026"
 image: "/img/uploads/partner_group_video.png"
 youtube_video: "https://youtu.be/J2wx7klRBrs?si=HCWL-RQQlZNaG98r"
 large: false
+featured_home: true
+group: "Video"
 weight: 2
 seo_title: "Video produkcia a fotenie eventu Finančná olympiáda 2026 | Crow Production"
 meta_description: "Profesionálna video produkcia a fotoreport z Finančnej olympiády 2026 pre Partners Group — eventové video aj reportážna fotografia od Crow Production."
