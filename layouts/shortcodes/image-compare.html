@@ -1,0 +1,9 @@
+<div class="image-compare" data-image-compare>
+  <img class="image-compare-after-img" src="{{ .Get "after" }}" alt="{{ .Get "afterLabel" | default "Po" }}">
+  <div class="image-compare-before">
+    <img src="{{ .Get "before" }}" alt="{{ .Get "beforeLabel" | default "Pred" }}">
+  </div>
+  <div class="image-compare-handle"></div>
+  <span class="image-compare-label image-compare-label-before">{{ .Get "beforeLabel" | default "Pred" }}</span>
+  <span class="image-compare-label image-compare-label-after">{{ .Get "afterLabel" | default "Po" }}</span>
+</div>
