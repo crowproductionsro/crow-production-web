@@ -105,7 +105,7 @@
 
 {{ $blogPages := (where (where site.RegularPages "Section" "blog") "RelPermalink" "!=" .RelPermalink).ByDate.Reverse }}
 {{ $sameCategory := where $blogPages "Params.category" .Params.category }}
-{{ $related := ($sameCategory | union $blogPages) | first 3 }}
+{{ $related := ($sameCategory | union $blogPages) | first 2 }}
 
 {{ if $related }}
 <section class="related-section">
