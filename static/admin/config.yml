@@ -40,6 +40,14 @@ collections:
       - { label: "Meta popis", name: "meta_description", widget: "text", required: false, hint: "Krátky popis pre vyhľadávače, cca 150-160 znakov." }
       - { label: "Skryté (koncept)", name: "draft", widget: "boolean", default: false, hint: "Zapnite, ak sa má projekt dočasne skryť z webu." }
       - { label: "Detailný popis projektu", name: "body", widget: "markdown", required: false }
+      - label: "Fotogaléria (napr. backstage)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        hint: "Pridajte viacero fotiek — zobrazia sa ako galéria pod videom/hlavnou fotkou na stránke projektu."
+        fields:
+          - { label: "Fotografia", name: "image", widget: "image" }
+          - { label: "ALT text", name: "alt", widget: "string", required: false }
 
   - name: "project_categories"
     label: "🎬 Projekty — Kategórie"

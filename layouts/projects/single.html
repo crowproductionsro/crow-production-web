@@ -20,6 +20,18 @@
       {{ with .Params.youtube_video }}{{ partial "youtube-embed.html" . }}{{ end }}
       {{ .Content }}
     </div>
+
+    {{ with .Params.gallery }}
+    <div class="article-gallery">
+      {{ range . }}
+      {{ $img := .image }}
+      {{ $alt := .alt }}
+      {{ if $img }}
+      <img class="gallery-img" src="{{ $img }}" alt="{{ $alt }}">
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
   </div>
 </section>
 {{ end }}
