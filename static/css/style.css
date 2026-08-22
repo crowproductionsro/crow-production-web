@@ -454,14 +454,14 @@ h3 { font-size: 1.4rem; }
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 280px;
   gap: 24px;
 }
 
-.item-large { grid-column: span 2; grid-row: span 2; }
+.item-large { grid-column: span 2; }
 
 .portfolio-item {
   position: relative;
+  aspect-ratio: 16 / 9;
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -776,8 +776,8 @@ h3 { font-size: 1.4rem; }
 
   h2 { font-size: 2rem; }
   .services-grid { grid-template-columns: 1fr; }
-  .portfolio-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
-  .item-large { grid-column: span 1; grid-row: span 1; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .item-large { grid-column: span 1; }
   .about-stats { flex-wrap: wrap; gap: 28px; }
 
   .blog-grid { grid-template-columns: 1fr; }
@@ -851,7 +851,7 @@ h3 { font-size: 1.4rem; }
 .blog-card:hover { border-color: var(--color-gold); transform: translateY(-3px); }
 .blog-card-thumb {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
 }
