@@ -1,0 +1,32 @@
+{{ $photos := slice }}
+{{ range where site.RegularPages "Section" "projects" }}
+  {{ $projTitle := .Title }}
+  {{ with .Params.image }}
+    {{ $photos = $photos | append (dict "src" . "alt" $projTitle) }}
+  {{ end }}
+  {{ range .Params.gallery }}
+    {{ $galAlt := .alt | default $projTitle }}
+    {{ with .image }}
+      {{ $photos = $photos | append (dict "src" . "alt" $galAlt) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $photos }}
+<section class="backstage-gallery">
+  <div class="container">
+    <p class="backstage-gallery-title">Zo zákulisia natáčania</p>
+  </div>
+
+  <div class="backstage-marquee">
+    <div class="backstage-track">
+      {{ range $photos }}
+      <img class="backstage-item" src="{{ .src }}" alt="{{ .alt }}" loading="lazy">
+      {{ end }}
+      {{ range $photos }}
+      <img class="backstage-item" src="{{ .src }}" alt="" aria-hidden="true" loading="lazy">
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
