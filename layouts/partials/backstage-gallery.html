@@ -18,8 +18,10 @@
     <p class="backstage-gallery-title">Zo zákulisia natáčania</p>
 
     <div class="backstage-grid">
-      {{ range $photos }}
-      <img class="backstage-item" src="{{ .src }}" alt="{{ .alt }}" loading="lazy">
+      {{ range $i, $photo := (first 6 $photos) }}
+      <div class="backstage-item{{ if eq $i 0 }} item-large{{ end }}">
+        <img src="{{ $photo.src }}" alt="{{ $photo.alt }}" loading="lazy">
+      </div>
       {{ end }}
     </div>
   </div>
