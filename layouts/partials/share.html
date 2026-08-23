@@ -1,0 +1,24 @@
+{{ $url := .Permalink }}
+{{ $title := .Params.seo_title | default .Title }}
+
+<div class="share-section" data-share-url="{{ $url }}" data-share-title="{{ $title }}">
+  <span class="share-label">Zdieľať</span>
+  <div class="share-buttons">
+    <button type="button" class="share-btn" data-share-network="facebook" aria-label="Zdieľať na Facebooku">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
+    </button>
+    <button type="button" class="share-btn" data-share-network="x" aria-label="Zdieľať na X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2H21.5l-7.3 8.34L22.8 22h-6.77l-5.3-6.93L4.6 22H1.33l7.8-8.92L1.2 2h6.94l4.8 6.34L18.24 2zm-1.19 18h1.83L7.03 3.9H5.06L17.05 20z"/></svg>
+    </button>
+    <button type="button" class="share-btn" data-share-network="whatsapp" aria-label="Zdieľať cez WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.11c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.13.07-1.83-.12-.42-.11-.96-.31-1.65-.61-2.91-1.26-4.81-4.18-4.96-4.37-.15-.2-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.44.27-.29.58-.36.77-.36.2 0 .39 0 .56.01.18.01.42-.07.66.5.24.6.83 2.06.9 2.21.07.15.12.33.02.53-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.29.15.46.13.63-.08.17-.2.73-.85.92-1.14.2-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+    </button>
+    <button type="button" class="share-btn" data-share-network="linkedin" aria-label="Zdieľať na LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+    </button>
+    <button type="button" class="share-btn" data-share-network="copy" aria-label="Kopírovať odkaz (napr. pre Instagram)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07l1.36-1.36"></path></svg>
+    </button>
+  </div>
+  <span class="share-copied" data-share-feedback hidden>Odkaz skopírovaný — vlož ho napr. do Instagram Stories</span>
+</div>

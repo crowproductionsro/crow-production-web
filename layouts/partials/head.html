@@ -2,6 +2,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ with .Params.seo_title }}{{ . }}{{ else }}{{ if .IsHome }}{{ .Site.Title }} — Video a Foto Produkcia{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}{{ end }}</title>
 <meta name="description" content="{{ with .Params.meta_description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+{{ $ogTitle := .Params.seo_title | default .Title }}
+{{ if .IsHome }}{{ $ogTitle = .Site.Title }}{{ end }}
+{{ $ogDesc := .Params.meta_description | default .Params.summary | default .Site.Params.description }}
+{{ $ogImage := .Params.cover_image | default .Params.image | default "/img/uploads/crow-production-logo-videoprodukcia.png" }}
+<meta property="og:type" content="{{ if eq .Section "blog" }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $ogDesc }}">
+<meta property="og:image" content="{{ $ogImage | absURL }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="sk_SK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $ogDesc }}">
+<meta name="twitter:image" content="{{ $ogImage | absURL }}">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
