@@ -12,6 +12,18 @@
   {{ end }}
 {{ end }}
 
+{{ $galeriaDir := "static/img/uploads/galeria" }}
+{{ if fileExists $galeriaDir }}
+  {{ range readDir $galeriaDir }}
+    {{ if not .IsDir }}
+      {{ $name := .Name }}
+      {{ if not (strings.HasPrefix $name ".") }}
+        {{ $photos = $photos | append (dict "src" (printf "/img/uploads/galeria/%s" $name) "alt" "Zo zákulisia natáčania") }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ if $photos }}
 <section class="backstage-gallery">
   <div class="container">
