@@ -24,6 +24,25 @@ disableKinds = ["taxonomy", "term"]
   name = "Projekty"
   url = "/projects/"
   weight = 3
+  identifier = "projekty"
+
+[[menu.main]]
+  name = "Video"
+  url = "/projects/video/"
+  weight = 1
+  parent = "projekty"
+
+[[menu.main]]
+  name = "Foto"
+  url = "/projects/foto/"
+  weight = 2
+  parent = "projekty"
+
+[[menu.main]]
+  name = "Web & Grafika"
+  url = "/projects/web-grafika/"
+  weight = 3
+  parent = "projekty"
 
 [[menu.main]]
   name = "Blog"

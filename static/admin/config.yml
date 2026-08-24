@@ -40,7 +40,7 @@ collections:
         name: "group"
         widget: "select"
         default: "Video"
-        options: ["Video", "Foto", "Web & dizajn"]
+        options: ["Video", "Foto", "Web & Grafika"]
         hint: "Určuje, do ktorej sekcie na stránke Projekty projekt patrí."
       - { label: "Poradie zobrazenia (nižšie číslo = vyššie)", name: "weight", widget: "number", value_type: "int", default: 10 }
       - { label: "SEO titulok", name: "seo_title", widget: "string", required: false, hint: "Zobrazí sa v záložke prehliadača a vo výsledkoch vyhľadávania. Ak necháte prázdne, použije sa názov projektu." }

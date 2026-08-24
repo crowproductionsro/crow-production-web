@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <a href="/projects/" class="back-link">&larr; Späť na projekty</a>
+    <p class="eyebrow">{{ .Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="section-sub">{{ .Params.lead }}</p>
+  </div>
+</section>
+
+{{ $groupProjects := (where (where site.RegularPages "Section" "projects") "Params.group" .Params.group).ByWeight }}
+
+<section class="portfolio project-group project-group-first">
+  <div class="container">
+    {{ if $groupProjects }}
+    <div class="portfolio-grid">
+      {{ range $i, $p := $groupProjects }}
+      {{ $cat := "" }}
+      {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
+      {{ $ytID := "" }}
+      {{ with $p.Params.youtube_video }}{{ $ytID = partial "youtube-id.html" . }}{{ end }}
+      <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
+        {{ if $p.Params.image }}
+        <img class="portfolio-thumb" src="{{ $p.Params.image }}" alt="{{ $p.Title }}">
+        {{ else if $ytID }}
+        <img class="portfolio-thumb" src="https://img.youtube.com/vi/{{ $ytID }}/hqdefault.jpg" alt="{{ $p.Title }}">
+        {{ else }}
+        <div class="portfolio-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
+        {{ end }}
+        <div class="portfolio-info">
+          <span class="portfolio-tag">{{ with $cat }}{{ .name }}{{ end }}</span>
+          <h3>{{ $p.Title }}</h3>
+          <p>{{ $p.Params.description }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="project-hub-empty">Čoskoro sem pridáme ďalšie projekty v tejto kategórii. Máte záujem o spoluprácu? <a href="/#contact">Kontaktujte nás</a>.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

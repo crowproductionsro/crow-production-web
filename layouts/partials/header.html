@@ -6,7 +6,18 @@
 
     <nav class="main-nav" id="mainNav">
       {{ range .Site.Menus.main }}
+      {{ if .Children }}
+      <div class="nav-dropdown">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        <div class="nav-dropdown-menu">
+          {{ range .Children }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ else }}
       <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
       {{ end }}
     </nav>
 

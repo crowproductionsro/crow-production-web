@@ -7,41 +7,33 @@
   </div>
 </section>
 
-{{ $allProjects := .Pages.ByWeight }}
-{{ $groups := slice "Video" "Foto" "Web & dizajn" }}
+{{ $groups := slice
+  (dict "name" "Video" "slug" "video" "desc" "Hudobné videoklipy, reklamné spoty, svadobné a firemné video")
+  (dict "name" "Foto" "slug" "foto" "desc" "Produktová, event a portrétová fotografia")
+  (dict "name" "Web & Grafika" "slug" "web-grafika" "desc" "Tvorba web stránok a grafický dizajn")
+}}
 
-{{ range $gi, $group := $groups }}
-{{ $groupProjects := where $allProjects "Params.group" $group }}
-{{ if $groupProjects }}
-<section class="portfolio project-group{{ if eq $gi 0 }} project-group-first{{ end }}">
+<section class="project-hub-section">
   <div class="container">
-    <div class="section-head">
-      <h2>{{ $group }}</h2>
-    </div>
-    <div class="portfolio-grid">
-      {{ range $i, $p := $groupProjects }}
-      {{ $cat := "" }}
-      {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
-      {{ $ytID := "" }}
-      {{ with $p.Params.youtube_video }}{{ $ytID = partial "youtube-id.html" . }}{{ end }}
-      <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
-        {{ if $p.Params.image }}
-        <img class="portfolio-thumb" src="{{ $p.Params.image }}" alt="{{ $p.Title }}">
-        {{ else if $ytID }}
-        <img class="portfolio-thumb" src="https://img.youtube.com/vi/{{ $ytID }}/hqdefault.jpg" alt="{{ $p.Title }}">
+    <div class="project-hub-grid">
+      {{ range $i, $g := $groups }}
+      {{ $groupProjects := (where (where site.RegularPages "Section" "projects") "Params.group" $g.name).ByWeight }}
+      {{ $thumb := "" }}
+      {{ with (index $groupProjects 0) }}{{ $thumb = .Params.image }}{{ end }}
+      <a href="/projects/{{ $g.slug }}/" class="project-hub-card">
+        {{ if $thumb }}
+        <img class="project-hub-thumb" src="{{ $thumb }}" alt="{{ $g.name }}">
         {{ else }}
-        <div class="portfolio-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
+        <div class="project-hub-thumb thumb-{{ add (mod $i 5) 1 }}"></div>
         {{ end }}
-        <div class="portfolio-info">
-          <span class="portfolio-tag">{{ with $cat }}{{ .name }}{{ end }}</span>
-          <h3>{{ $p.Title }}</h3>
-          <p>{{ $p.Params.description }}</p>
+        <div class="project-hub-overlay">
+          <h2>{{ $g.name }}</h2>
+          <p>{{ $g.desc }}</p>
+          <span class="project-hub-link">Zobraziť projekty &rarr;</span>
         </div>
       </a>
       {{ end }}
     </div>
   </div>
 </section>
-{{ end }}
-{{ end }}
 {{ end }}
