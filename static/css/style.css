@@ -521,6 +521,9 @@ h3 { font-size: 1.4rem; }
 }
 .portfolio-item:hover .portfolio-thumb { transform: scale(1.06); }
 
+.photo-portfolio-grid .portfolio-item { aspect-ratio: 3 / 4; }
+.photo-portfolio-grid .portfolio-item.is-landscape { aspect-ratio: 16 / 9; }
+
 .thumb-1 { background: linear-gradient(155deg, #2b2b2b, #0d0d0d 60%, #bea060 140%); }
 .thumb-2 { background: linear-gradient(155deg, #3a2f22, #141414); }
 .thumb-3 { background: linear-gradient(155deg, #1c2b2c, #0d0d0d); }

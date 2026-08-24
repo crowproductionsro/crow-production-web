@@ -13,7 +13,7 @@
 <section class="portfolio project-group project-group-first">
   <div class="container">
     {{ if $groupProjects }}
-    <div class="portfolio-grid">
+    <div class="portfolio-grid{{ if eq .Params.group "Foto" }} photo-portfolio-grid{{ end }}">
       {{ range $i, $p := $groupProjects }}
       {{ $cat := "" }}
       {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
