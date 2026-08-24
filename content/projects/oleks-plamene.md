@@ -1,6 +1,6 @@
 ---
 title: "Oleks — plamene"
-category: "fotografia"
+category: "portret-a-promo"
 description: "Čiernobiele portrétové fotenie s horiacimi novinami"
 image: "/img/uploads/fotoprojekty/fotenie_oleks_plamene_5.jpg"
 large: false

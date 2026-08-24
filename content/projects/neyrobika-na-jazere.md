@@ -1,6 +1,6 @@
 ---
 title: "Neyrobika na jazere"
-category: "fotografia"
+category: "portret-a-promo"
 description: "Nočné portrétové fotenie v prírode pri jazere"
 image: "/img/uploads/foto_projekty/neyrobika_fotenie_v_prirode_noc.jpg"
 large: false

@@ -947,13 +947,13 @@ h3 { font-size: 1.4rem; }
   gap: 32px;
 }
 
-.blog-filters {
+.blog-filters, .project-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 40px;
 }
-.blog-filter-btn {
+.blog-filter-btn, .project-filter-btn {
   background: transparent;
   border: 1px solid rgba(218,218,218,0.2);
   color: var(--color-grey-mid);
@@ -965,8 +965,8 @@ h3 { font-size: 1.4rem; }
   cursor: pointer;
   transition: border-color var(--transition), color var(--transition);
 }
-.blog-filter-btn:hover { color: var(--color-grey-light); }
-.blog-filter-btn.active { border-color: var(--color-gold); color: var(--color-gold); }
+.blog-filter-btn:hover, .project-filter-btn:hover { color: var(--color-grey-light); }
+.blog-filter-btn.active, .project-filter-btn.active { border-color: var(--color-gold); color: var(--color-gold); }
 
 .blog-card {
   display: block;

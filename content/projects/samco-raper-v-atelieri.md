@@ -1,6 +1,6 @@
 ---
 title: "Samčo — raper v ateliéri"
-category: "fotografia"
+category: "portret-a-promo"
 description: "Štúdiové portrétové fotenie repera Samča"
 image: "/img/uploads/fotoprojekty/samco_raper_fotenie_6.jpg"
 large: false

@@ -1,6 +1,6 @@
 ---
 title: "Svadobné fotenie — Pepa a Kája"
-category: "fotografia"
+category: "svadobne"
 description: "Svadobné fotenie páru Pepa a Kája v prírode"
 image: "/img/uploads/fotoprojekty/svadobny_fotograf_pepa_a_kaja_7.jpg"
 large: false

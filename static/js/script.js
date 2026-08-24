@@ -80,3 +80,23 @@ if (blogFilters) {
     });
   });
 }
+
+// Project category filter (Foto listing)
+const projectFilters = document.getElementById('projectFilters');
+
+if (projectFilters) {
+  const projectCards = document.querySelectorAll('#projectGrid .portfolio-item');
+
+  projectFilters.addEventListener('click', e => {
+    const btn = e.target.closest('[data-filter]');
+    if (!btn) return;
+
+    projectFilters.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    projectCards.forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+    });
+  });
+}

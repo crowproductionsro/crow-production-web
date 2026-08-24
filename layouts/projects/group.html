@@ -13,13 +13,23 @@
 <section class="portfolio project-group project-group-first">
   <div class="container">
     {{ if $groupProjects }}
-    <div class="portfolio-grid{{ if eq .Params.group "Foto" }} photo-portfolio-grid{{ end }}">
+    {{ if eq .Params.group "Foto" }}
+    <div class="project-filters" id="projectFilters">
+      <button type="button" class="project-filter-btn active" data-filter="all">Všetky</button>
+      {{ range $slug, $cat := hugo.Data.project_categories }}
+      {{ if where $groupProjects "Params.category" $slug }}
+      <button type="button" class="project-filter-btn" data-filter="{{ $slug }}">{{ $cat.name }}</button>
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+    <div class="portfolio-grid{{ if eq .Params.group "Foto" }} photo-portfolio-grid{{ end }}" id="projectGrid">
       {{ range $i, $p := $groupProjects }}
       {{ $cat := "" }}
       {{ with $p.Params.category }}{{ $cat = index hugo.Data.project_categories . }}{{ end }}
       {{ $ytID := "" }}
       {{ with $p.Params.youtube_video }}{{ $ytID = partial "youtube-id.html" . }}{{ end }}
-      <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}">
+      <a href="{{ $p.RelPermalink }}" class="portfolio-item{{ if $p.Params.large }} item-large{{ end }}"{{ with $p.Params.category }} data-category="{{ . }}"{{ end }}>
         {{ if $p.Params.image }}
         <img class="portfolio-thumb" src="{{ $p.Params.image }}" alt="{{ $p.Title }}">
         {{ else if $ytID }}

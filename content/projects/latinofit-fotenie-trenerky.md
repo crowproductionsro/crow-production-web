@@ -1,6 +1,6 @@
 ---
 title: "LatinoFit — fotenie trénerky"
-category: "fotografia"
+category: "portret-a-promo"
 description: "Štúdiové fotenie trénerky značky LatinoFit"
 image: "/img/uploads/fotoprojekty/fotenie_trenerky_latinofit_4.jpg"
 large: false
