@@ -10,7 +10,7 @@
     {{ with $cat }}<span class="project-tag-single">{{ .name }}</span>{{ end }}
     <h1>{{ .Title }}</h1>
 
-    {{ if not .Params.youtube_video }}
+    {{ if and (not .Params.youtube_video) (not .Params.gallery) }}
     <div class="project-media thumb-{{ $n }}"></div>
     {{ end }}
 
