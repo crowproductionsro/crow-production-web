@@ -20,7 +20,7 @@
     </div>
 
     {{ with .Params.gallery }}
-    <div class="article-gallery">
+    <div class="article-gallery{{ if eq $.Params.group "Foto" }} photo-gallery{{ end }}">
       {{ range . }}
       {{ $img := .image }}
       {{ $alt := .alt }}

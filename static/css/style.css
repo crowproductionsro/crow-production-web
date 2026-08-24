@@ -1185,6 +1185,14 @@ h3 { font-size: 1.4rem; }
 }
 .gallery-img:hover { opacity: 0.85; }
 
+.photo-gallery {
+  grid-auto-rows: 160px;
+  grid-auto-flow: dense;
+}
+.photo-gallery .gallery-img { height: 100%; }
+.photo-gallery .gallery-img.is-portrait { grid-row: span 2; }
+.photo-gallery .gallery-img.is-landscape { grid-column: span 2; }
+
 .gallery-lightbox {
   position: fixed;
   inset: 0;
