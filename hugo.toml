@@ -12,7 +12,7 @@ disableKinds = ["taxonomy", "term"]
 
 [[menu.main]]
   name = "Domov"
-  url = "/#home"
+  url = "/"
   weight = 1
 
 [[menu.main]]
