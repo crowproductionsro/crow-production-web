@@ -1,8 +1,9 @@
 ---
 title: "Finančná olympiáda 2026 — Partners Group"
+date: 2026-06-15
 category: "event"
 description: "Video a foto produkcia eventu Finančná olympiáda 2026"
-image: "/img/uploads/partner_group_video.png"
+image: "/img/uploads/partner_group_video.webp"
 youtube_video: "https://youtu.be/J2wx7klRBrs?si=HCWL-RQQlZNaG98r"
 large: false
 featured_home: true

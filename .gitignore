@@ -3,3 +3,5 @@ resources/
 .hugo_build.lock
 bin/
 .DS_Store
+smtp-config.php
+static/smtp-config.php

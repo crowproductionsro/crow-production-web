@@ -1,5 +1,6 @@
 ---
 title: "Medial Banana — Dnesok je crazy ft. Lasky"
+date: 2026-07-01
 category: "videoklip"
 description: "Hudobný videoklip"
 image: "/img/uploads/medial_banana_dnesok_je_crazy_lasky_crowproduction_videoklip_thumbnail.webp"

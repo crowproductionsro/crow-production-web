@@ -22,6 +22,7 @@ collections:
     fields:
       - { label: "Názov projektu", name: "title", widget: "string" }
       - { label: "URL adresa (slug)", name: "slug", widget: "string", required: false, hint: "Časť webovej adresy za /projects/. Ak necháte prázdne, vygeneruje sa automaticky z názvu. Zmenou tu zmeníte aj skutočnú URL stránky." }
+      - { label: "Dátum pridania", name: "date", widget: "datetime", hint: "Určuje poradie v sekcii „Novinky“ na hlavnej stránke (najnovšie 3 projekty)." }
       - label: "Kategória"
         name: "category"
         widget: "relation"

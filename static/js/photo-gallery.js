@@ -24,8 +24,8 @@
     });
   });
 
-  // Portfolio listing tiles (Foto group page)
-  document.querySelectorAll(".photo-portfolio-grid .portfolio-item").forEach(function (item) {
+  // Portfolio listing tiles (Foto group page only — other listings stay a uniform height)
+  document.querySelectorAll(".photo-portfolio-grid .portfolio-item:not(.item-large)").forEach(function (item) {
     var img = item.querySelector(".portfolio-thumb");
     if (!img || img.tagName !== "IMG") return;
     watch(img, function () {

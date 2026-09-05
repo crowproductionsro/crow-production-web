@@ -1,5 +1,6 @@
 ---
 title: "Falling"
+date: 2026-07-10
 category: "videoklip"
 description: "Hudobný videoklip"
 image: "/img/uploads/falling_videoklip_crowproduction.webp"

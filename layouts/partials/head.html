@@ -6,7 +6,7 @@
 {{ $ogTitle := .Params.seo_title | default .Title }}
 {{ if .IsHome }}{{ $ogTitle = .Site.Title }}{{ end }}
 {{ $ogDesc := .Params.meta_description | default .Params.summary | default .Site.Params.description }}
-{{ $ogImage := .Params.cover_image | default .Params.image | default "/img/uploads/crow-production-logo-videoprodukcia.png" }}
+{{ $ogImage := .Params.cover_image | default .Params.image | default "/img/uploads/crow-production-logo-videoprodukcia.webp" }}
 <meta property="og:type" content="{{ if eq .Section "blog" }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $ogDesc }}">

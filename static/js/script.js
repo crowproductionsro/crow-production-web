@@ -100,3 +100,26 @@ if (projectFilters) {
     });
   });
 }
+
+// Contact form submit feedback (?form=success / ?form=error in the URL after redirect)
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get('form');
+  const successMsg = contactForm.querySelector('[data-form-success]');
+  const errorMsg = contactForm.querySelector('[data-form-error]');
+
+  if (status === 'success' && successMsg) {
+    successMsg.hidden = false;
+    contactForm.reset();
+  } else if (status === 'error' && errorMsg) {
+    errorMsg.hidden = false;
+  }
+
+  if (status) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('form');
+    window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+  }
+}

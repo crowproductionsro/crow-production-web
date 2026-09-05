@@ -8,7 +8,7 @@
   </div>
 </section>
 
-{{ $groupProjects := (where (where site.RegularPages "Section" "projects") "Params.group" .Params.group).ByWeight }}
+{{ $groupProjects := (where (where site.RegularPages "Section" "projects") "Params.group" .Params.group).ByDate.Reverse }}
 
 <section class="portfolio project-group project-group-first">
   <div class="container">

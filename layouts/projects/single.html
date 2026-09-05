@@ -14,11 +14,6 @@
     <div class="project-media thumb-{{ $n }}"></div>
     {{ end }}
 
-    <div class="project-body article-body">
-      {{ with .Params.youtube_video }}{{ partial "youtube-embed.html" . }}{{ end }}
-      {{ .Content }}
-    </div>
-
     {{ with .Params.gallery }}
     <div class="article-gallery{{ if eq $.Params.group "Foto" }} photo-gallery{{ end }}">
       {{ range . }}
@@ -30,6 +25,11 @@
       {{ end }}
     </div>
     {{ end }}
+
+    <div class="project-body article-body">
+      {{ with .Params.youtube_video }}{{ partial "youtube-embed.html" . }}{{ end }}
+      {{ .Content }}
+    </div>
   </div>
 </section>
 {{ end }}

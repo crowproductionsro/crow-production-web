@@ -1,8 +1,9 @@
 ---
 title: "WARES feat. Erik Tresor — Stále baví má"
+date: 2026-07-15
 category: "videoklip"
 description: "Oficiálny videoklip, prod. Hoodini"
-image: "/img/uploads/erik_tresor_wares_stale_bavi_ma_videoklip.png"
+image: "/img/uploads/erik_tresor_wares_stale_bavi_ma_videoklip.webp"
 youtube_video: "https://www.youtube.com/watch?v=8sD5t8khlEY"
 large: false
 featured_home: true

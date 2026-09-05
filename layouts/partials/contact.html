@@ -21,7 +21,15 @@
       </div>
     </div>
 
-    <form class="contact-form">
+    <form class="contact-form" action="/contact.php" method="POST" id="contactForm">
+      <p class="form-notice form-notice-success" data-form-success hidden>Ďakujeme za správu! Ozveme sa vám čo najskôr.</p>
+      <p class="form-notice form-notice-error" data-form-error hidden>Správu sa nepodarilo odoslať. Skúste to prosím znova, alebo nám napíšte priamo na {{ .Params.contact_email }}.</p>
+
+      <div class="form-row form-row-hidden" aria-hidden="true">
+        <label for="website">Nevypĺňajte toto pole</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
       <div class="form-row">
         <label for="name">Meno a priezvisko</label>
         <input type="text" id="name" name="name" placeholder="Vaše meno" required>
