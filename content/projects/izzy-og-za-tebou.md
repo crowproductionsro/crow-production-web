@@ -3,6 +3,7 @@ title: "Izzy OG — Za tebou"
 date: 2026-08-23
 category: "videoklip"
 description: "Videoklip pre skladbu Izzy OG – Za tebou"
+image: "/img/uploads/izzy_og_za_tebou_videoklip.webp"
 youtube_video: "https://youtu.be/YxYL4I5ojgU"
 large: false
 featured_home: false
