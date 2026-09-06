@@ -120,6 +120,6 @@ if (contactForm) {
   if (status) {
     const url = new URL(window.location.href);
     url.searchParams.delete('form');
-    window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    window.history.replaceState({}, '', url.pathname + url.search);
   }
 }

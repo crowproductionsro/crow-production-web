@@ -31,6 +31,7 @@ contact_title_1: "Naplánujme vašu"
 contact_title_2: "video alebo foto produkciu."
 contact_subtitle: "Potrebujete reklamné video, videoklip, svadobné video, firemné video alebo fotografiu? Napíšte nám, o aký projekt ide, a pripravíme ponuku."
 contact_email: "info@crowproduction.sk"
+contact_phone: "+421 944 270 271"
 
 socials:
   - name: "Instagram"

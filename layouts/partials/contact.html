@@ -10,6 +10,12 @@
           <span class="detail-label">E-mail</span>
           <a href="mailto:{{ .Params.contact_email }}">{{ .Params.contact_email }}</a>
         </div>
+        {{ with .Params.contact_phone }}
+        <div class="contact-detail">
+          <span class="detail-label">Telefón</span>
+          <a href="tel:{{ . | replaceRE "\\s" "" }}">{{ . }}</a>
+        </div>
+        {{ end }}
         <div class="contact-detail">
           <span class="detail-label">Sociálne siete</span>
           <div class="social-links">
