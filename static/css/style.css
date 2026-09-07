@@ -931,8 +931,6 @@ h3 { font-size: 1.4rem; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .item-large { grid-column: span 1; grid-row: span 1; }
   .about-stats { flex-wrap: wrap; gap: 28px; }
-
-  .blog-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================
@@ -969,6 +967,10 @@ h3 { font-size: 1.4rem; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; }
 }
 
 .blog-filters, .project-filters {
