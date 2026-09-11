@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   email = "info@crowproduction.sk"
-  description = "Crow Production — video produkcia a fotografické služby. Natáčame reklamné video, videoklipy, svadobné video, firemné video a fotografiu."
+  description = "Video produkcia, videoklipy, svadobné a firemné video, reklamné spoty a profesionálna fotografia na Slovensku — kompletný servis od nápadu po strih."
 
 [[menu.main]]
   name = "Domov"

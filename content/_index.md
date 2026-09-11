@@ -1,6 +1,6 @@
 ---
 title: "Crow Production"
-meta_description: "Crow Production — video produkcia a fotografické služby. Natáčame reklamné video, videoklipy, svadobné video, firemné video a fotografiu."
+meta_description: "Video produkcia, videoklipy, svadobné a firemné video, reklamné spoty a profesionálna fotografia na Slovensku — kompletný servis od nápadu po strih."
 
 hero_title_1: "VIDEO PRODUKCIA"
 hero_title_2: "A FOTOGRAFICKÉ"
