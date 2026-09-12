@@ -1,12 +1,14 @@
 ---
-title: "AI mi zostrihala celé video v DaVinci Resolve za 20 minút. Návod, čísla a moje skutočné pocity"
+title: "Claude Code a GPT oficiálne v DaVinci Resolve | Návod a pocity"
 slug: "davinci-resolve-ai-strih-videa-navod"
 date: 2026-09-11
 category: "video"
 subcategory: "video-strih"
 author: "matus-takac"
 summary: "DaVinci Resolve 21.1 priniesol AI Assistant cez MCP. Zadal som jeden prompt a odišiel od počítača — návod krok po kroku, reálne časy a moje skutočné pocity, bez marketingových rečí."
-seo_title: "AI strih videa v DaVinci Resolve 21.1: návod a skúsenosti"
+cover_image: "/img/uploads/claude_gpt_davinci_resolve_prepojenie_thumbnail.webp"
+cover_image_alt: "Claude Code, ChatGPT a DaVinci Resolve prepojenie cez natívny AI Assistant — ukážka rozhrania s AI strihom videa"
+seo_title: "Claude Code a GPT oficiálne v DaVinci Resolve | Návod a pocity"
 meta_description: "DaVinci Resolve 21.1 má AI Assistant cez MCP. Návod krok po kroku, reálne časy, prečo Opus a nie Sonnet a prečo to nefunguje na bezplatnej verzii."
 draft: false
 faq:
@@ -133,7 +135,7 @@ Z tridsiatich minút materiálu bolo **20 minút ticha**. Dvadsať minút, ktor�
 
 ## Čo presne prišlo v Resolve 21.1
 
-Blackmagic pridal do Resolve **natívny MCP server** (Model Context Protocol). Zjednodušene: Resolve otvoril oficiálne rozhranie, cez ktoré s ním AI asistent hovorí priamo.
+[Blackmagic Design](https://www.blackmagicdesign.com/products/davinciresolve) pridal do Resolve **natívny MCP server** (Model Context Protocol). Zjednodušene: Resolve otvoril oficiálne rozhranie, cez ktoré s ním AI asistent hovorí priamo.
 
 Rozdiel oproti tomu, čo sa dalo aj predtým, je zásadný. Niektoré modely vedia ovládať počítač aj tak, že sa pozerajú na obrazovku a klikajú ako človek. Skúšal som to. **Funguje to, ale je to veľmi neefektívne a veľmi pomalé.** Model musí uhádnuť, kde je tlačidlo, a keď sa okno posunie, je zle.
 
